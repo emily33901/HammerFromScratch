@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 #include "ModelBrowser.h"
-#include "dme_controls/mdlpicker.h"
+#include "mdlpicker.h"
 #include "matsys_controls/matsyscontrols.h"
 #include "vgui_controls/TextEntry.h"
 #include "vgui_controls/Splitter.h"

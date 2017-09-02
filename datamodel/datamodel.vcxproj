@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Datamodel</ProjectName>
+    <ProjectGuid>{935148AD-A283-4210-A6B2-DCC6A97E783A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.26730.12</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>true</PreLinkEventUseInBuild>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>if EXIST ..\lib\public\$(TargetName).lib for /f "delims=" %25%25A in (%27attrib "..\lib\public\$(TargetName).lib"%27) do set valveTmpIsReadOnly="%25%25A"
+set valveTmpIsReadOnlyLetter=%25valveTmpIsReadOnly:~6,1%25
+if "%25valveTmpIsReadOnlyLetter%25"=="R" (
+attrib -r ..\lib\public\$(TargetName).lib
+..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\$(TargetName).lib
+attrib +r ..\lib\public\$(TargetName).lib
+)
+set path=..\..\game\bin%3b%25path%25
+if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc datamodel.vpc cf0bc8b8 -crc ..\vpc_scripts\source_lib_win32_base.vpc 254f6656 -crc ..\vpc_scripts\version.vpc 26d8e8a7 -crc ..\vpc_scripts\source_lib_win32_debug.vpc cf5cf9db -crc ..\vpc_scripts\source_lib_win32_release.vpc 7991f7e4
+</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\common;..\public;..\public\tier0;..\public\tier1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;DATAMODEL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>Debug/datamodel.pch</PrecompiledHeaderOutputFile>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <AssemblerOutput />
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <BrowseInformation />
+      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ErrorReporting>Prompt</ErrorReporting>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>call ..\vpc_scripts\valve_p4_edit.cmd ..\lib\public\$(TargetName).lib ..</Command>
+    </PreLinkEvent>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>..\sourcesdk_aux\lib\public\datamodel.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Xdcmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Xdcmake>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)datamodel.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>if EXIST ..\lib\public\$(TargetName).lib for /f "delims=" %25%25A in (%27attrib "..\lib\public\$(TargetName).lib"%27) do set valveTmpIsReadOnly="%25%25A"
+set valveTmpIsReadOnlyLetter=%25valveTmpIsReadOnly:~6,1%25
+if "%25valveTmpIsReadOnlyLetter%25"=="R" (
+attrib -r ..\lib\public\$(TargetName).lib
+..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\$(TargetName).lib
+attrib +r ..\lib\public\$(TargetName).lib
+)
+set path=..\..\game\bin%3b%25path%25
+if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc datamodel.vpc cf0bc8b8 -crc ..\vpc_scripts\source_lib_win32_base.vpc 254f6656 -crc ..\vpc_scripts\version.vpc 26d8e8a7 -crc ..\vpc_scripts\source_lib_win32_debug.vpc cf5cf9db -crc ..\vpc_scripts\source_lib_win32_release.vpc 7991f7e4
+</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk_aux;..\sourcesdk\public\tier1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;DATAMODEL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling />
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>Debug/datamodel.pch</PrecompiledHeaderOutputFile>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <AssemblerOutput />
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <BrowseInformation />
+      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ErrorReporting>Prompt</ErrorReporting>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>call ..\vpc_scripts\valve_p4_edit.cmd ..\lib\public\$(TargetName).lib ..</Command>
+    </PreLinkEvent>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>..\lib\public\datamodel.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Xdcmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Xdcmake>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)datamodel.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="clipboardmanager.cpp" />
+    <ClCompile Include="datamodel.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;_WINDOWS;_MBCS;_USRDLL;DATAMODEL_LIB;_WIN32</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;_WINDOWS;_MBCS;_USRDLL;DATAMODEL_LIB;_WIN32</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="dependencygraph.cpp" />
+    <ClCompile Include="dmattribute.cpp" />
+    <ClCompile Include="dmelement.cpp" />
+    <ClCompile Include="dmelementdictionary.cpp" />
+    <ClCompile Include="dmelementfactoryhelper.cpp" />
+    <ClCompile Include="DmElementFramework.cpp" />
+    <ClCompile Include="dmserializerbinary.cpp" />
+    <ClCompile Include="dmserializerkeyvalues.cpp" />
+    <ClCompile Include="dmserializerkeyvalues2.cpp" />
+    <ClCompile Include="dmserializerxml.cpp" />
+    <ClCompile Include="undomanager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\public\appframework\IAppSystem.h" />
+    <ClInclude Include="..\public\commonmacros.h" />
+    <ClInclude Include="..\public\datamodel\attributeflags.h" />
+    <ClInclude Include="..\public\datamodel\dmattributetypes.h" />
+    <ClInclude Include="..\public\datamodel\dmattributevar.h" />
+    <ClInclude Include="..\public\datamodel\dmehandle.h" />
+    <ClInclude Include="..\public\datamodel\dmelement.h" />
+    <ClInclude Include="..\public\datamodel\dmelementfactoryhelper.h" />
+    <ClInclude Include="..\public\datamodel\dmelementhandle.h" />
+    <ClInclude Include="..\public\datamodel\dmelementinternal.h" />
+    <ClInclude Include="..\public\datamodel\idatamodel.h" />
+    <ClInclude Include="..\public\datamodel\idmattribute.h" />
+    <ClInclude Include="..\public\interface.h" />
+    <ClInclude Include="..\public\protected_things.h" />
+    <ClInclude Include="..\public\string_t.h" />
+    <ClInclude Include="..\public\tier0\basetypes.h" />
+    <ClInclude Include="..\public\tier0\dbg.h" />
+    <ClInclude Include="..\public\tier0\fasttimer.h" />
+    <ClInclude Include="..\public\tier0\platform.h" />
+    <ClInclude Include="clipboardmanager.h" />
+    <ClInclude Include="datamodel.h" />
+    <ClInclude Include="dependencygraph.h" />
+    <ClInclude Include="dmattributeinternal.h" />
+    <ClInclude Include="dmelementdictionary.h" />
+    <ClInclude Include="DmElementFramework.h" />
+    <ClInclude Include="dmserializerbinary.h" />
+    <ClInclude Include="dmserializerkeyvalues.h" />
+    <ClInclude Include="dmserializerkeyvalues2.h" />
+    <ClInclude Include="dmserializerxml.h" />
+    <ClInclude Include="undomanager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="datamodel.vpc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\sourcesdk_aux\lib\common\parsifal.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

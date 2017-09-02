@@ -453,7 +453,7 @@ BOOL CWADTexture::Load(int fd, HANDLE hFile)
 				m_pPalette->palPalEntry[i].peRed = PalBuf[i*3];
 				m_pPalette->palPalEntry[i].peGreen = PalBuf[i*3+1];
 				m_pPalette->palPalEntry[i].peBlue = PalBuf[i*3+2];
-				m_pPalette->palPalEntry[i].peFlags = D3DRMPALETTE_READONLY | PC_NOCOLLAPSE;
+				m_pPalette->palPalEntry[i].peFlags = 1 | PC_NOCOLLAPSE; // D3DRMPALETTE_READONLY = 1
 			}
 
 			m_pPalette->palVersion = 0x300;

@@ -1386,9 +1386,9 @@ void CRender3D::EndRenderFrame(void)
 						nTargetWidth - 1, nTargetHeight -1,
 						dest_rt->GetActualWidth(),
 						dest_rt->GetActualHeight());
-					swap(dest_rt_current,dest_rt_other);
-					swap(sample_last,sample_other);
-					swap(add_0_to_1,add_1_to_0);
+					std::swap(dest_rt_current,dest_rt_other);
+					std::swap(sample_last,sample_other);
+					std::swap(add_0_to_1,add_1_to_0);
 				}
 				pRenderContext->SetRenderTarget(NULL);
 				pRenderContext->DrawScreenSpaceRectangle(
@@ -1407,14 +1407,14 @@ void CRender3D::EndRenderFrame(void)
 		{
 			// blit it
 			BITMAPINFOHEADER mybmh;
-			mybmh.biHeight=-g_pLPreviewOutputBitmap->m_nHeight;
+			mybmh.biHeight=-g_pLPreviewOutputBitmap->Width();
 			mybmh.biSize=sizeof(BITMAPINFOHEADER);
 			// now, set up bitmapheader struct for StretchDIB
-			mybmh.biWidth=g_pLPreviewOutputBitmap->m_nWidth;
+			mybmh.biWidth=g_pLPreviewOutputBitmap->Width();
 			mybmh.biPlanes=1;
 			mybmh.biBitCount=32;
 			mybmh.biCompression=BI_RGB;
-			mybmh.biSizeImage=g_pLPreviewOutputBitmap->m_nWidth*g_pLPreviewOutputBitmap->m_nHeight;
+			mybmh.biSizeImage=g_pLPreviewOutputBitmap->Width()*g_pLPreviewOutputBitmap->Width();
 
 			RECT wrect;
 			memset(&wrect,0,sizeof(wrect));
@@ -1548,14 +1548,14 @@ void CRender3D::Render(void)
 	{
 		// blit it
 		BITMAPINFOHEADER mybmh;
-		mybmh.biHeight=-g_pLPreviewOutputBitmap->m_nHeight;
+		mybmh.biHeight=-g_pLPreviewOutputBitmap->Width();
 		mybmh.biSize=sizeof(BITMAPINFOHEADER);
 		// now, set up bitmapheader struct for StretchDIB
-		mybmh.biWidth=g_pLPreviewOutputBitmap->m_nWidth;
+		mybmh.biWidth=g_pLPreviewOutputBitmap->Width();
 		mybmh.biPlanes=1;
 		mybmh.biBitCount=32;
 		mybmh.biCompression=BI_RGB;
-		mybmh.biSizeImage=g_pLPreviewOutputBitmap->m_nWidth*g_pLPreviewOutputBitmap->m_nHeight;
+		mybmh.biSizeImage=g_pLPreviewOutputBitmap->Width()*g_pLPreviewOutputBitmap->Width();
 
 		RECT wrect;
 		memset(&wrect,0,sizeof(wrect));

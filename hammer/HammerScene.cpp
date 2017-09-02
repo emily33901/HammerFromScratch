@@ -14,7 +14,7 @@
 //-----------------------------------------------------------------------------
 // Purpose: Helper to scene module for parsing the .vcd file
 //-----------------------------------------------------------------------------
-class CSceneTokenProcessor : public ISceneTokenProcessor
+class CHammerSceneTokenProcessor : public ISceneTokenProcessor
 {
 public:
 	const char	*CurrentToken( void );
@@ -27,7 +27,7 @@ public:
 // Purpose: 
 // Output : const
 //-----------------------------------------------------------------------------
-const char	*CSceneTokenProcessor::CurrentToken( void )
+const char	*CHammerSceneTokenProcessor::CurrentToken( void )
 {
 	return token;
 }
@@ -37,7 +37,7 @@ const char	*CSceneTokenProcessor::CurrentToken( void )
 // Input  : crossline - 
 // Output : Returns true on success, false on failure.
 //-----------------------------------------------------------------------------
-bool CSceneTokenProcessor::GetToken( bool crossline )
+bool CHammerSceneTokenProcessor::GetToken( bool crossline )
 {
 	return ::GetToken( crossline ) ? true : false;
 }
@@ -46,7 +46,7 @@ bool CSceneTokenProcessor::GetToken( bool crossline )
 // Purpose: 
 // Output : Returns true on success, false on failure.
 //-----------------------------------------------------------------------------
-bool CSceneTokenProcessor::TokenAvailable( void )
+bool CHammerSceneTokenProcessor::TokenAvailable( void )
 {
 	return ::TokenAvailable() ? true : false;
 }
@@ -56,7 +56,7 @@ bool CSceneTokenProcessor::TokenAvailable( void )
 // Input  : *fmt - 
 //			... - 
 //-----------------------------------------------------------------------------
-void CSceneTokenProcessor::Error( const char *fmt, ... )
+void CHammerSceneTokenProcessor::Error( const char *fmt, ... )
 {
 	char string[ 2048 ];
 	va_list argptr;
@@ -67,7 +67,7 @@ void CSceneTokenProcessor::Error( const char *fmt, ... )
 	Warning( "%s", string );
 }
 
-static CSceneTokenProcessor g_TokenProcessor;
+static CHammerSceneTokenProcessor g_TokenProcessor;
 
 
 //-----------------------------------------------------------------------------

@@ -25,7 +25,7 @@
 #include "ToolPickFace.h"
 #include "ToolManager.h"
 #include "SoundBrowser.h"
-#include "ifilesystemopendialog.h"
+#include "../sourcesdk_aux/ifilesystemdialog.h"
 #include "filesystem_tools.h"
 #include "tier0/icommandline.h"
 #include "ModelBrowser.h"

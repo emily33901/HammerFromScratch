@@ -33,6 +33,7 @@
 #include "mapdefs.h"
 #include "camera.h"
 #include "options.h"
+#include "bone_setup.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include <tier0/memdbgon.h>
@@ -482,8 +483,8 @@ matrix3x4_t *StudioModel::SetUpBones ( bool bUpdatePose )
 	
 	if ( bUpdatePose )
 	{
-		InitPose( pStudioHdr, m_pPosePos, m_pPoseAng, BONE_USED_BY_ANYTHING );
-		CalcPose( pStudioHdr, NULL, m_pPosePos, m_pPoseAng, m_sequence, m_cycle, m_poseParameter, BONE_USED_BY_ANYTHING );
+		IBoneSetup boneSetup(pStudioHdr, BONE_USED_BY_ANYTHING, m_poseParameter);
+		boneSetup.InitPose(m_pPosePos, m_pPoseAng);
 	}
 	
 	mstudiobone_t *pbones = pStudioHdr->pBone( 0 );

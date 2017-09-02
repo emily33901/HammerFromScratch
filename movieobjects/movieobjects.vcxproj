@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Movieobjects</ProjectName>
+    <ProjectGuid>{135490B9-324A-4BB4-BFFA-7C306B919D74}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.26730.12</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>true</PreLinkEventUseInBuild>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>if EXIST ..\lib\public\$(TargetName).lib for /f "delims=" %25%25A in (%27attrib "..\lib\public\$(TargetName).lib"%27) do set valveTmpIsReadOnly="%25%25A"
+set valveTmpIsReadOnlyLetter=%25valveTmpIsReadOnly:~6,1%25
+if "%25valveTmpIsReadOnlyLetter%25"=="R" (
+attrib -r ..\lib\public\$(TargetName).lib
+..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\$(TargetName).lib
+attrib +r ..\lib\public\$(TargetName).lib
+)
+set path=..\..\game\bin%3b%25path%25
+if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc movieobjects.vpc 2000a000 -crc ..\vpc_scripts\source_lib_win32_base.vpc 254f6656 -crc ..\vpc_scripts\version.vpc 26d8e8a7 -crc ..\vpc_scripts\source_lib_win32_debug.vpc cf5cf9db -crc ..\vpc_scripts\source_lib_win32_release.vpc 7991f7e4
+</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\common;..\public;..\public\tier0;..\public\tier1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;MOVIEOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeader />
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <AssemblerOutput />
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <BrowseInformation />
+      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ErrorReporting>Prompt</ErrorReporting>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>call ..\vpc_scripts\valve_p4_edit.cmd ..\lib\public\$(TargetName).lib ..</Command>
+    </PreLinkEvent>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>..\lib\public\movieobjects.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Xdcmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Xdcmake>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)movieobjects.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>if EXIST ..\lib\public\$(TargetName).lib for /f "delims=" %25%25A in (%27attrib "..\lib\public\$(TargetName).lib"%27) do set valveTmpIsReadOnly="%25%25A"
+set valveTmpIsReadOnlyLetter=%25valveTmpIsReadOnly:~6,1%25
+if "%25valveTmpIsReadOnlyLetter%25"=="R" (
+attrib -r ..\lib\public\$(TargetName).lib
+..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\$(TargetName).lib
+attrib +r ..\lib\public\$(TargetName).lib
+)
+set path=..\..\game\bin%3b%25path%25
+if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc movieobjects.vpc 2000a000 -crc ..\vpc_scripts\source_lib_win32_base.vpc 254f6656 -crc ..\vpc_scripts\version.vpc 26d8e8a7 -crc ..\vpc_scripts\source_lib_win32_debug.vpc cf5cf9db -crc ..\vpc_scripts\source_lib_win32_release.vpc 7991f7e4
+</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\;..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk_aux\;..\sourcesdk\public\tier1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;MOVIEOBJECTS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling />
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeader />
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <AssemblerOutput />
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <BrowseInformation />
+      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ErrorReporting>Prompt</ErrorReporting>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>call ..\vpc_scripts\valve_p4_edit.cmd ..\lib\public\$(TargetName).lib ..</Command>
+    </PreLinkEvent>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>..\sourcesdk_aux\lib\public\movieobjects.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Xdcmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Xdcmake>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)movieobjects.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\sourcesdk\public\bone_setup.cpp" />
+    <ClCompile Include="..\sourcesdk\public\collisionutils.cpp" />
+    <ClCompile Include="..\sourcesdk\public\phonemeconverter.cpp" />
+    <ClCompile Include="..\sourcesdk\public\studio.cpp" />
+    <ClCompile Include="dmeanimationlist.cpp" />
+    <ClCompile Include="dmeanimationset.cpp" />
+    <ClCompile Include="dmeattachment.cpp" />
+    <ClCompile Include="dmebalancetostereocalculatoroperator.cpp" />
+    <ClCompile Include="dmebookmark.cpp" />
+    <ClCompile Include="dmecamera.cpp" />
+    <ClCompile Include="dmechannel.cpp" />
+    <ClCompile Include="dmeclip.cpp" />
+    <ClCompile Include="dmecombinationoperator.cpp" />
+    <ClCompile Include="dmedag.cpp" />
+    <ClCompile Include="dmedccmakefile.cpp" />
+    <ClCompile Include="dmedrawsettings.cpp" />
+    <ClCompile Include="dmeeditortypedictionary.cpp" />
+    <ClCompile Include="dmeexpressionoperator.cpp" />
+    <ClCompile Include="dmeeyeball.cpp" />
+    <ClCompile Include="dmeeyeposition.cpp" />
+    <ClCompile Include="dmefaceset.cpp" />
+    <ClCompile Include="dmegamemodel.cpp" />
+    <ClCompile Include="dmegamemodelinput.cpp" />
+    <ClCompile Include="dmeinput.cpp" />
+    <ClCompile Include="dmejoint.cpp" />
+    <ClCompile Include="dmekeyboardinput.cpp" />
+    <ClCompile Include="dmelight.cpp" />
+    <ClCompile Include="dmelog.cpp" />
+    <ClCompile Include="dmemakefile.cpp" />
+    <ClCompile Include="dmemakefileutils.cpp" />
+    <ClCompile Include="dmematerial.cpp" />
+    <ClCompile Include="dmematerialoverlayfxclip.cpp" />
+    <ClCompile Include="dmemdl.cpp" />
+    <ClCompile Include="dmemdlmakefile.cpp" />
+    <ClCompile Include="dmemesh.cpp" />
+    <ClCompile Include="dmemodel.cpp" />
+    <ClCompile Include="dmemorphoperator.cpp" />
+    <ClCompile Include="dmemouseinput.cpp" />
+    <ClCompile Include="dmeoperator.cpp" />
+    <ClCompile Include="dmepackoperators.cpp" />
+    <ClCompile Include="dmeparticlesystemdefinition.cpp" />
+    <ClCompile Include="dmephonememapping.cpp" />
+    <ClCompile Include="dmeselection.cpp" />
+    <ClCompile Include="dmeshape.cpp" />
+    <ClCompile Include="dmesound.cpp" />
+    <ClCompile Include="dmetimeframe.cpp" />
+    <ClCompile Include="dmetimeselection.cpp" />
+    <ClCompile Include="dmetrack.cpp" />
+    <ClCompile Include="dmetrackgroup.cpp" />
+    <ClCompile Include="dmetransform.cpp" />
+    <ClCompile Include="dmetransforminput.cpp" />
+    <ClCompile Include="dmetransformlist.cpp" />
+    <ClCompile Include="dmetransformoperator.cpp" />
+    <ClCompile Include="dmeunpackoperators.cpp" />
+    <ClCompile Include="dmevertexdata.cpp" />
+    <ClCompile Include="dmmeshcomp.cpp" />
+    <ClCompile Include="dmmeshutils.cpp" />
+    <ClCompile Include="dmobjserializer.cpp" />
+    <ClCompile Include="movieobjects_interfaces.cpp" />
+    <ClCompile Include="timeutils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="movieobjects.vpc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\sourcesdk\public\mathlib\mathlib.h" />
+    <ClInclude Include="..\sourcesdk\public\mathlib\vector.h" />
+    <ClInclude Include="dmeanimationlist.h" />
+    <ClInclude Include="dmeanimationset.h" />
+    <ClInclude Include="dmeattachment.h" />
+    <ClInclude Include="dmebalancetostereocalculatoroperator.h" />
+    <ClInclude Include="dmebookmark.h" />
+    <ClInclude Include="dmecamera.h" />
+    <ClInclude Include="dmechannel.h" />
+    <ClInclude Include="dmeclip.h" />
+    <ClInclude Include="dmecombinationoperator.h" />
+    <ClInclude Include="dmedag.h" />
+    <ClInclude Include="dmedccmakefile.h" />
+    <ClInclude Include="dmedrawsettings.h" />
+    <ClInclude Include="dmeeditortypedictionary.h" />
+    <ClInclude Include="dmeexpressionoperator.h" />
+    <ClInclude Include="dmeeyeball.h" />
+    <ClInclude Include="dmeeyeposition.h" />
+    <ClInclude Include="dmefaceset.h" />
+    <ClInclude Include="dmegamemodel.h" />
+    <ClInclude Include="dmegamemodelinput.h" />
+    <ClInclude Include="dmeinput.h" />
+    <ClInclude Include="dmejoint.h" />
+    <ClInclude Include="dmekeyboardinput.h" />
+    <ClInclude Include="dmelight.h" />
+    <ClInclude Include="dmelog.h" />
+    <ClInclude Include="dmemakefile.h" />
+    <ClInclude Include="dmemakefileutils.h" />
+    <ClInclude Include="dmematerial.h" />
+    <ClInclude Include="dmematerialoverlayfxclip.h" />
+    <ClInclude Include="dmemdl.h" />
+    <ClInclude Include="dmemdlmakefile.h" />
+    <ClInclude Include="dmemesh.h" />
+    <ClInclude Include="dmemodel.h" />
+    <ClInclude Include="dmemorphoperator.h" />
+    <ClInclude Include="dmemouseinput.h" />
+    <ClInclude Include="dmeoperator.h" />
+    <ClInclude Include="dmepackoperators.h" />
+    <ClInclude Include="dmeparticlesystemdefinition.h" />
+    <ClInclude Include="dmephonememapping.h" />
+    <ClInclude Include="dmeselection.h" />
+    <ClInclude Include="dmeshape.h" />
+    <ClInclude Include="dmesound.h" />
+    <ClInclude Include="dmetestmesh.h" />
+    <ClInclude Include="dmetimeframe.h" />
+    <ClInclude Include="dmetimeselection.h" />
+    <ClInclude Include="dmetimeselectiontimes.h" />
+    <ClInclude Include="dmetrack.h" />
+    <ClInclude Include="dmetrackgroup.h" />
+    <ClInclude Include="dmetransform.h" />
+    <ClInclude Include="dmetransforminput.h" />
+    <ClInclude Include="dmetransformlist.h" />
+    <ClInclude Include="dmetransformoperator.h" />
+    <ClInclude Include="dmeunpackoperators.h" />
+    <ClInclude Include="dmevertexdata.h" />
+    <ClInclude Include="dmmeshcomp.h" />
+    <ClInclude Include="dmmeshutils.h" />
+    <ClInclude Include="dmobjserializer.h" />
+    <ClInclude Include="idmemakefileutils.h" />
+    <ClInclude Include="movieobjects.h" />
+    <ClInclude Include="timeutils.h" />
+    <ClInclude Include="..\sourcesdk\public\phonemeconverter.h" />
+    <ClInclude Include="movieobjects_interfaces.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

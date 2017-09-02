@@ -10,7 +10,7 @@
 #include "EditGameConfigs.h"
 #include "hammer.h"
 #include "OPTConfigs.h"
-#include "ConfigManager.h"
+#include "../sourcesdk_aux/ConfigManager.h"
 #include "process.h"
 #include "Options.h"
 #include "TextureBrowser.h"

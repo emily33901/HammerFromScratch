@@ -10,7 +10,7 @@
 #include "MainFrm.h"
 #include "mapdoc.h"
 #include "KeyValues.h"
-#include "ConfigManager.h"
+#include "../sourcesdk_aux/ConfigManager.h"
 #include "GlobalFunctions.h"
 #include "CustomMessages.h"
 #include "OptionProperties.h"

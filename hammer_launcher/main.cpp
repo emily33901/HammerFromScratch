@@ -22,7 +22,7 @@
 #include "inputsystem/iinputsystem.h"
 #include "tier0/icommandline.h"
 #include "filesystem_init.h"
-#include "SteamWriteMinidump.h"
+//#include "SteamWriteMinidump.h"
 
 //-----------------------------------------------------------------------------
 // Global systems
@@ -41,7 +41,7 @@ struct _EXCEPTION_POINTERS * pExceptionInfo
 {
 #ifndef NO_STEAM
 	// TODO: dynamically set the minidump comment from contextual info about the crash (i.e current VPROF node)?
-	SteamWriteMiniDumpUsingExceptionInfoWithBuildId( uStructuredExceptionCode, pExceptionInfo, 0 );
+	//SteamWriteMiniDumpUsingExceptionInfoWithBuildId( uStructuredExceptionCode, pExceptionInfo, 0 );
 #endif
 }
 
@@ -92,7 +92,9 @@ bool CHammerApp::Create( )
 	if ( FileSystem_GetFileSystemDLLName( pFileSystemDLL, MAX_PATH, bSteam ) != FS_OK )
 		return false;
 
-	FileSystem_SetupSteamInstallPath();
+	//FileSystem_SetupSteamInstallPath();
+	CFSSteamSetupInfo steamInfo;
+	FileSystem_SetupSteamEnvironment(steamInfo);
 
 	AppModule_t fileSystemModule = LoadModule( pFileSystemDLL );
 	g_pFileSystem = (IFileSystem*)AddSystem( fileSystemModule, FILESYSTEM_INTERFACE_VERSION );

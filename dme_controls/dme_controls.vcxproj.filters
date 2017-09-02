@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{116c706b-cdf7-4091-8df8-f6e9d0235ef3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Animation Set Editor">
+      <UniqueIdentifier>{bfd2d496-9a38-4277-84ff-6f5e35c09807}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{db1dde88-fb99-4633-970f-a3c4c7b6a567}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{f2f16824-70f0-4475-a2b3-6ffdaec6f3ab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AssetBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="attributeassetpickerpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeBasePickerPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeBoolChoicePanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeColorPickerPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="attributedetailtypepickerpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeElementPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeElementPickerPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeFilePickerPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeIntChoicePanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeInterpolatorChoicePanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeMDLPickerPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeSequencePickerPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="attributeshaderpickerpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="attributeslider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeSoundPickerPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeStringChoicePanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="attributesurfacepropertypickerpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeTextEntry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeTextPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttributeWidgetFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseAttributeChoicePanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseAttributeDoubleChoicePanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseAttributePanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChannelGraphPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dmecombinationsystemeditorpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dmecontrols.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dmedageditpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dmedagrenderpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dmelogeditpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dmepanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dmepicker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dmepresetgroupeditorpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DmeSourceDCCFilePanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DmeSourceSkinPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ElementPropertiesTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileListManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filtercombobox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="manipulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mdlpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mdlpicker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mdlsequencepicker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="particlesystempanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="particlesystempropertiespanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sequencepicker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="simplepotterywheelpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soundpicker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="soundrecordpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vmtpanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseAnimationSetEditor.cpp">
+      <Filter>Source Files\Animation Set Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseAnimSetAttributeSliderPanel.cpp">
+      <Filter>Source Files\Animation Set Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseAnimSetControlGroupPanel.cpp">
+      <Filter>Source Files\Animation Set Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseAnimSetPresetFaderPanel.cpp">
+      <Filter>Source Files\Animation Set Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="presetpicker.cpp">
+      <Filter>Source Files\Animation Set Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\phonemeconverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnimSetAttributeValue.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetBuilder.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="attributeassetpickerpanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeBasePickerPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeBoolChoicePanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeColorPickerPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="attributedetailtypepickerpanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeElementPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeElementPickerPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeFilePickerPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeIntChoicePanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeInterpolatorChoicePanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeMDLPickerPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeSequencePickerPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="attributeshaderpickerpanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="attributeslider.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeSoundPickerPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeStringChoicePanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="attributesurfacepropertypickerpanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeTextEntry.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeTextPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AttributeWidgetFactory.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseAnimSetAttributeSliderPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseAnimSetControlGroupPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseAnimSetPresetFaderPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseAttributeChoicePanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseAttributeDoubleChoicePanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseAttributePanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChannelGraphPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dmecombinationsystemeditorpanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dmecontrols.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dmecontrols_utils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dmedageditpanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dmedagrenderpanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dmepanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dmepicker.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dmepresetgroupeditorpanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DmeSourceDCCFilePanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DmeSourceSkinPanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ElementPropertiesTree.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileListManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filtercombobox.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inotifyui.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LogPreview.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="manipulator.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mdlpanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mdlpicker.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mdlsequencepicker.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="particlesystempanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="particlesystempropertiespanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="presetpicker.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RecordingState.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sequencepicker.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="simplepotterywheelpanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soundpicker.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="soundrecordpanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vmtpanel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseAnimationSetEditor.h">
+      <Filter>Source Files\Animation Set Editor</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dme_controls.vpc">
+      <Filter>Resources</Filter>
+    </None>
+  </ItemGroup>
+</Project>

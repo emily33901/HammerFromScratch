@@ -45,13 +45,13 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
     <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</PostBuildEventUseInBuild>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
-    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</PreBuildEventUseInBuild>
+    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreBuildEventUseInBuild>
     <PreLinkEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</PreLinkEventUseInBuild>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
-    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PostBuildEventUseInBuild>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <PreBuildEvent>
@@ -100,7 +100,7 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc hammer_dll.vpc cc1
       <ShowProgress>NotSet</ShowProgress>
       <OutputFile>$(OutDir)hammer_dll.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\lib\common;..\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\sourcesdk\lib\common;..\sourcesdk\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libc;libcd;libcmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
@@ -155,7 +155,7 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc hammer_dll.vpc cc1
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;..\sourcesdk\common\shaderdll;..\sourcesdk\common\iostream;..\sourcesdk\dx9sdk\include;..\sourcesdk\engine;..\sourcesdk\game\shared;..\sourcesdk\utils\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;..\sourcesdk\common\shaderdll;..\sourcesdk\common\iostream;..\sourcesdk\dx9sdk\include;..\sourcesdk\engine;..\sourcesdk\game\shared;..\sourcesdk\utils\common;C:\Users\joshua\Documents\GitHub\F1-Hammer\dme_controls;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;VALVE;PROTECTED_THINGS_DISABLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>
@@ -185,11 +185,11 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc hammer_dll.vpc cc1
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>winmm.lib;rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;rpcrt4.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
       <OutputFile>$(OutDir)hammer_dll.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\lib\common;..\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\sourcesdk\lib\common;..\sourcesdk\lib\public;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libc;libcd;libcmtd;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
@@ -202,6 +202,7 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc hammer_dll.vpc cc1
       </BaseAddress>
       <TargetMachine>MachineX86</TargetMachine>
       <LinkErrorReporting>PromptImmediately</LinkErrorReporting>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Manifest>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -234,6 +235,11 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\sourcesdk\game\shared\iscenetokenprocessor.h" />
+    <ClInclude Include="..\sourcesdk_aux\ConfigManager.h" />
+    <ClInclude Include="..\sourcesdk_aux\ifilesystemdialog.h" />
+    <ClInclude Include="..\sourcesdk_aux\SourceAppInfo.h" />
+    <ClInclude Include="..\sourcesdk_aux\steam.h" />
     <ClInclude Include="activeitemlist.h" />
     <ClInclude Include="AnchorMgr.h" />
     <ClInclude Include="anglebox.h" />
@@ -244,17 +250,17 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClInclude Include="brushops.h" />
     <ClInclude Include="bsplighting.h" />
     <ClInclude Include="bsplightingthread.h" />
-    <ClInclude Include="..\public\builddisp.h" />
+    <ClInclude Include="..\sourcesdk\public\builddisp.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="childfrm.h" />
-    <ClInclude Include="..\public\chunkfile.h" />
+    <ClInclude Include="..\sourcesdk\public\chunkfile.h" />
     <ClInclude Include="clipcode.h" />
-    <ClInclude Include="..\public\collisionutils.h" />
+    <ClInclude Include="..\sourcesdk\public\collisionutils.h" />
     <ClInclude Include="controlbarids.h" />
     <ClInclude Include="culltreenode.h" />
     <ClInclude Include="custommessages.h" />
     <ClInclude Include="detailobjects.h" />
-    <ClInclude Include="..\public\disp_common.h" />
+    <ClInclude Include="..\sourcesdk\public\disp_common.h" />
     <ClInclude Include="dispmanager.h" />
     <ClInclude Include="dispmapimagefilter.h" />
     <ClInclude Include="disppaint.h" />
@@ -286,9 +292,9 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClInclude Include="ibsplighting.h" />
     <ClInclude Include="iconcombobox.h" />
     <ClInclude Include="irender2d.h" />
-    <ClInclude Include="..\public\ivraddll.h" />
+    <ClInclude Include="..\sourcesdk\public\ivraddll.h" />
     <ClInclude Include="keyboard.h" />
-    <ClInclude Include="..\public\keyframe\keyframe.h" />
+    <ClInclude Include="..\sourcesdk\public\keyframe\keyframe.h" />
     <ClInclude Include="listboxex.h" />
     <ClInclude Include="mainfrm.h" />
     <ClInclude Include="mapdefs.h" />
@@ -448,60 +454,60 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClInclude Include="strdlg.h" />
     <ClInclude Include="torusdlg.h" />
     <ClInclude Include="transformdlg.h" />
-    <ClInclude Include="..\public\mathlib\amd3dx.h" />
-    <ClInclude Include="..\public\arraystack.h" />
-    <ClInclude Include="..\public\tier0\basetypes.h" />
-    <ClInclude Include="..\public\bone_setup.h" />
-    <ClInclude Include="..\public\bspfile.h" />
-    <ClInclude Include="..\public\bspflags.h" />
+    <ClInclude Include="..\sourcesdk\public\mathlib\amd3dx.h" />
+    <ClInclude Include="..\sourcesdk\public\arraystack.h" />
+    <ClInclude Include="..\sourcesdk\public\tier0\basetypes.h" />
+    <ClInclude Include="..\sourcesdk\public\bone_setup.h" />
+    <ClInclude Include="..\sourcesdk\public\bspfile.h" />
+    <ClInclude Include="..\sourcesdk\public\bspflags.h" />
     <ClInclude Include="buildnum.h" />
-    <ClInclude Include="..\public\mathlib\bumpvects.h" />
-    <ClInclude Include="..\public\cache_user.h" />
-    <ClInclude Include="..\public\cmodel.h" />
-    <ClInclude Include="..\common\ConfigManager.h" />
-    <ClInclude Include="..\public\const.h" />
+    <ClInclude Include="..\sourcesdk\public\mathlib\bumpvects.h" />
+    <ClInclude Include="..\sourcesdk\public\cache_user.h" />
+    <ClInclude Include="..\sourcesdk\public\cmodel.h" />
+    <ClInclude Include="..\sourcesdk\common\ConfigManager.h" />
+    <ClInclude Include="..\sourcesdk\public\const.h" />
     <ClInclude Include="dispview.h" />
     <ClInclude Include="EntityDefs.h" />
-    <ClInclude Include="..\public\filesystem.h" />
+    <ClInclude Include="..\sourcesdk\public\filesystem.h" />
     <ClInclude Include="FilteredComboBox.h" />
     <ClInclude Include="GDClass.h" />
     <ClInclude Include="hammerbar.h" />
     <ClInclude Include="helperfactory.h" />
     <ClInclude Include="HelperInfo.h" />
     <ClInclude Include="ibsplightingthread.h" />
-    <ClInclude Include="..\public\IHammer.h" />
+    <ClInclude Include="..\sourcesdk\public\IHammer.h" />
     <ClInclude Include="InputOutput.h" />
-    <ClInclude Include="..\public\tier1\interface.h" />
+    <ClInclude Include="..\sourcesdk\public\tier1\interface.h" />
     <ClInclude Include="lpreview_thread.h" />
     <ClInclude Include="lprvwindow.h" />
     <ClInclude Include="MapHelper.h" />
     <ClInclude Include="mapsprite.h" />
-    <ClInclude Include="..\public\mathlib\mathlib.h" />
-    <ClInclude Include="..\public\ntree.h" />
+    <ClInclude Include="..\sourcesdk\public\mathlib\mathlib.h" />
+    <ClInclude Include="..\sourcesdk\public\ntree.h" />
     <ClInclude Include="osver.h" />
     <ClInclude Include="Render.h" />
-    <ClInclude Include="..\public\s3_intrf.h" />
+    <ClInclude Include="..\sourcesdk\public\s3_intrf.h" />
     <ClInclude Include="Selection.h" />
     <ClInclude Include="SelectModeDlgBar.h" />
     <ClInclude Include="shellmessagewnd.h" />
     <ClInclude Include="SmoothingGroupMgr.h" />
     <ClInclude Include="sprite.h" />
-    <ClInclude Include="..\public\studio.h" />
+    <ClInclude Include="..\sourcesdk\public\studio.h" />
     <ClInclude Include="subdiv.h" />
     <ClInclude Include="texturesystem.h" />
-    <ClInclude Include="..\public\tier1\tokenreader.h" />
-    <ClInclude Include="..\public\tier1\utlbuffer.h" />
-    <ClInclude Include="..\public\tier1\utllinkedlist.h" />
-    <ClInclude Include="..\public\tier1\utlmemory.h" />
-    <ClInclude Include="..\public\tier1\utlrbtree.h" />
-    <ClInclude Include="..\public\tier1\utlvector.h" />
-    <ClInclude Include="..\public\mathlib\vector.h" />
-    <ClInclude Include="..\public\mathlib\vector2d.h" />
-    <ClInclude Include="..\public\mathlib\vector4d.h" />
-    <ClInclude Include="..\public\mathlib\vmatrix.h" />
-    <ClInclude Include="..\public\mathlib\vplane.h" />
-    <ClInclude Include="..\public\wadtypes.h" />
-    <ClInclude Include="..\public\worldsize.h" />
+    <ClInclude Include="..\sourcesdk\public\tier1\tokenreader.h" />
+    <ClInclude Include="..\sourcesdk\public\tier1\utlbuffer.h" />
+    <ClInclude Include="..\sourcesdk\public\tier1\utllinkedlist.h" />
+    <ClInclude Include="..\sourcesdk\public\tier1\utlmemory.h" />
+    <ClInclude Include="..\sourcesdk\public\tier1\utlrbtree.h" />
+    <ClInclude Include="..\sourcesdk\public\tier1\utlvector.h" />
+    <ClInclude Include="..\sourcesdk\public\mathlib\vector.h" />
+    <ClInclude Include="..\sourcesdk\public\mathlib\vector2d.h" />
+    <ClInclude Include="..\sourcesdk\public\mathlib\vector4d.h" />
+    <ClInclude Include="..\sourcesdk\public\mathlib\vmatrix.h" />
+    <ClInclude Include="..\sourcesdk\public\mathlib\vplane.h" />
+    <ClInclude Include="..\sourcesdk\public\wadtypes.h" />
+    <ClInclude Include="..\sourcesdk\public\worldsize.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\sourcesdk\public\tier0\afxmem_override.cpp" />
@@ -509,17 +515,18 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClCompile Include="anglebox.cpp" />
     <ClCompile Include="autoselcombo.cpp" />
     <ClCompile Include="axes2.cpp" />
-    <ClCompile Include="..\public\bone_setup.cpp">
+    <ClCompile Include="..\sourcesdk\public\bone_setup.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="boundbox.cpp" />
     <ClCompile Include="brushops.cpp" />
     <ClCompile Include="bsplighting.cpp" />
     <ClCompile Include="bsplightingthread.cpp" />
-    <ClCompile Include="..\public\builddisp.cpp">
+    <ClCompile Include="..\sourcesdk\public\builddisp.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -538,7 +545,7 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="childfrm.cpp" />
-    <ClCompile Include="..\public\chunkfile.cpp">
+    <ClCompile Include="..\sourcesdk\public\chunkfile.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -546,13 +553,13 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     </ClCompile>
     <ClCompile Include="clipcode.cpp" />
     <ClCompile Include="clock.cpp" />
-    <ClCompile Include="..\public\collisionutils.cpp">
+    <ClCompile Include="..\sourcesdk\public\collisionutils.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\common\ConfigManager.cpp">
+    <ClCompile Include="..\sourcesdk_aux\ConfigManager.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -561,13 +568,13 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClCompile Include="createarch.cpp" />
     <ClCompile Include="culltreenode.cpp" />
     <ClCompile Include="detailobjects.cpp" />
-    <ClCompile Include="..\public\disp_common.cpp">
+    <ClCompile Include="..\sourcesdk\public\disp_common.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\public\disp_powerinfo.cpp">
+    <ClCompile Include="..\sourcesdk\public\disp_powerinfo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -585,13 +592,13 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClCompile Include="entityconnection.cpp" />
     <ClCompile Include="events.cpp" />
     <ClCompile Include="FileChangeWatcher.cpp" />
-    <ClCompile Include="..\public\filesystem_helpers.cpp">
+    <ClCompile Include="..\sourcesdk\public\filesystem_helpers.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="..\public\filesystem_init.cpp">
+    <ClCompile Include="..\sourcesdk\public\filesystem_init.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -614,14 +621,14 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClCompile Include="helperfactory.cpp" />
     <ClCompile Include="history.cpp" />
     <ClCompile Include="iconcombobox.cpp" />
-    <ClCompile Include="..\public\interpolatortypes.cpp">
+    <ClCompile Include="..\sourcesdk\public\interpolatortypes.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="keyboard.cpp" />
-    <ClCompile Include="..\public\keyframe\keyframe.cpp">
+    <ClCompile Include="..\sourcesdk\public\keyframe\keyframe.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -643,7 +650,7 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClCompile Include="mapviewlogical.cpp" />
     <ClCompile Include="materialproxyfactory_wc.cpp" />
     <ClCompile Include="mdiclientwnd.cpp" />
-    <ClCompile Include="..\public\tier0\memoverride.cpp">
+    <ClCompile Include="..\sourcesdk\public\tier0\memoverride.cpp">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NO_MEMOVERRIDE_NEW_DELETE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
@@ -666,7 +673,7 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClCompile Include="render3dms.cpp" />
     <ClCompile Include="RenderUtils.cpp" />
     <ClCompile Include="richeditctrlex.cpp" />
-    <ClCompile Include="..\public\rope_physics.cpp">
+    <ClCompile Include="..\sourcesdk\public\rope_physics.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -681,14 +688,14 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ScenePreviewDlg.cpp" />
-    <ClCompile Include="..\utils\common\scriplib.cpp">
+    <ClCompile Include="..\sourcesdk\utils\common\scriplib.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Selection.cpp" />
-    <ClCompile Include="..\public\simple_physics.cpp">
+    <ClCompile Include="..\sourcesdk\public\simple_physics.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -696,7 +703,7 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     </ClCompile>
     <ClCompile Include="SoundBrowser.cpp" />
     <ClCompile Include="soundsystem.cpp" />
-    <ClCompile Include="..\common\SourceAppInfo.cpp">
+    <ClCompile Include="..\sourcesdk_aux\SourceAppInfo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -710,11 +717,12 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="stocksolids.cpp" />
-    <ClCompile Include="..\public\studio.cpp">
+    <ClCompile Include="..\sourcesdk\public\studio.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="studiomodel.cpp" />
     <ClCompile Include="targetnamecombo.cpp" />
@@ -722,7 +730,7 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClCompile Include="textureconverter.cpp" />
     <ClCompile Include="texturewindow.cpp" />
     <ClCompile Include="titlewnd.cpp" />
-    <ClCompile Include="..\public\vgui_controls\vgui_controls.cpp">
+    <ClCompile Include="..\sourcesdk\public\vgui_controls\vgui_controls.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -854,24 +862,24 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ResourceCompile Include="hammer.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\lib\public\bitmap.lib" />
-    <Library Include="..\lib\public\choreoobjects.lib" />
-    <Library Include="..\lib\public\datamodel.lib" />
-    <Library Include="..\lib\public\dme_controls.lib" />
-    <Library Include="..\lib\public\dmserializers.lib" />
-    <Library Include="..\lib\public\fgdlib.lib" />
-    <Library Include="..\lib\common\jpeglib.lib" />
-    <Library Include="..\lib\public\mathlib.lib" />
-    <Library Include="..\lib\public\matsys_controls.lib" />
-    <Library Include="..\lib\public\movieobjects.lib" />
-    <Library Include="..\lib\public\raytrace.lib" />
-    <Library Include="..\lib\public\sfmobjects.lib" />
-    <Library Include="..\lib\public\tier0.lib" />
-    <Library Include="..\lib\public\tier1.lib" />
-    <Library Include="..\lib\public\tier2.lib" />
-    <Library Include="..\lib\public\tier3.lib" />
-    <Library Include="..\lib\public\vgui_controls.lib" />
-    <Library Include="..\lib\public\vstdlib.lib" />
+    <Library Include="..\sourcesdk_aux\lib\public\bitmap.lib" />
+    <Library Include="..\sourcesdk_aux\lib\public\choreoobjects.lib" />
+    <Library Include="..\sourcesdk_aux\lib\public\dme_controls.lib" />
+    <Library Include="..\sourcesdk_aux\lib\public\dmserializers.lib" />
+    <Library Include="..\sourcesdk\lib\public\fgdlib.lib" />
+    <Library Include="..\sourcesdk_aux\lib\public\jpeglib.lib" />
+    <Library Include="..\sourcesdk_aux\lib\public\mathlib.lib" />
+    <Library Include="..\sourcesdk\lib\public\matsys_controls.lib" />
+    <Library Include="..\sourcesdk_aux\lib\public\movieobjects.lib" />
+    <Library Include="..\sourcesdk_aux\lib\public\raytrace.lib" />
+    <Library Include="..\sourcesdk\lib\public\tier0.lib" />
+    <Library Include="..\sourcesdk\lib\public\tier1.lib" />
+    <Library Include="..\sourcesdk\lib\public\tier2.lib" />
+    <Library Include="..\sourcesdk\lib\public\tier3.lib" />
+    <Library Include="..\sourcesdk\lib\public\vgui_controls.lib" />
+    <Library Include="..\sourcesdk\lib\public\vstdlib.lib" />
+    <Library Include="..\sourcesdk\lib\public\steam_api.lib" />
+    <Library Include="..\sourcesdk_aux\lib\public\Steam.lib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="hammer_dll.vpc" />
@@ -951,10 +959,6 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     </ProjectReference>
     <ProjectReference Include="..\datamodel\datamodel.vcxproj">
       <Project>{935148ad-a283-4210-a6b2-dcc6a97e783a}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\fgdlib\fgdlib.vcxproj">
-      <Project>{1eac6f73-f82c-4324-8411-302d3d029e5f}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="..\mathlib\mathlib.vcxproj">

@@ -80,15 +80,15 @@ float lineangle(float x1, float y1, float x2, float y2)
 }
 
 
-float rint(float f)
-{
-	if (f > 0.0f) {
-		return (float) floor(f + 0.5f);
-	} else if (f < 0.0f) {
-		return (float) ceil(f - 0.5f);
-	} else
-		return 0.0f;
-}
+//float rint(float f)
+//{
+//	if (f > 0.0f) {
+//		return (float) floor(f + 0.5f);
+//	} else if (f < 0.0f) {
+//		return (float) ceil(f - 0.5f);
+//	} else
+//		return 0.0f;
+//}
 
 //-----------------------------------------------------------------------------
 // Purpose: Builds the matrix for a counterclockwise rotation about an arbitrary axis.
@@ -293,7 +293,10 @@ void NormalizeBox( Vector &mins, Vector &maxs )
 	{
 		if ( mins[i] > maxs[i])
 		{
-			swap( mins[i], maxs[i] );
+			float temp = std::move(mins[i]);
+			mins[i] = std::move(maxs[i]);
+			maxs[i] = std::move(temp);
+			//std::swap( mins[i], maxs[i] );
 		}
 	}
 }
@@ -302,11 +305,15 @@ void NormalizeBox( Vector2D &mins, Vector2D &maxs )
 {
 	if ( mins.x > maxs.x )
 	{
-		swap( mins.x, maxs.x );
+		float temp = std::move(mins.x);
+		mins.x = std::move(maxs.x);
+		maxs.x = std::move(temp);
 	}
 	if ( mins.y > maxs.y )
 	{
-		swap( mins.y, maxs.y );
+		float temp = std::move(mins.y);
+		mins.y = std::move(maxs.y);
+		maxs.y = std::move(temp);
 	}
 }
 

@@ -63,22 +63,13 @@
     <ClInclude Include="bsplightingthread.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\builddisp.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="camera.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="childfrm.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\chunkfile.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="clipcode.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\collisionutils.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="controlbarids.h">
@@ -91,9 +82,6 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="detailobjects.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\disp_common.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="dispmanager.h">
@@ -186,13 +174,7 @@
     <ClInclude Include="irender2d.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\ivraddll.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="keyboard.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\keyframe\keyframe.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="listboxex.h">
@@ -672,49 +654,13 @@
     <ClInclude Include="transformdlg.h">
       <Filter>Source Files\Dialogs</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\mathlib\amd3dx.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\arraystack.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\tier0\basetypes.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\bone_setup.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\bspfile.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\bspflags.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="buildnum.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\mathlib\bumpvects.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\cache_user.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\cmodel.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\common\ConfigManager.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\const.h">
       <Filter>Common Header Files</Filter>
     </ClInclude>
     <ClInclude Include="dispview.h">
       <Filter>Common Header Files</Filter>
     </ClInclude>
     <ClInclude Include="EntityDefs.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\filesystem.h">
       <Filter>Common Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FilteredComboBox.h">
@@ -735,13 +681,7 @@
     <ClInclude Include="ibsplightingthread.h">
       <Filter>Common Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\IHammer.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="InputOutput.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\tier1\interface.h">
       <Filter>Common Header Files</Filter>
     </ClInclude>
     <ClInclude Include="lpreview_thread.h">
@@ -756,19 +696,10 @@
     <ClInclude Include="mapsprite.h">
       <Filter>Common Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\mathlib\mathlib.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\ntree.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="osver.h">
       <Filter>Common Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Render.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\s3_intrf.h">
       <Filter>Common Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Selection.h">
@@ -786,55 +717,139 @@
     <ClInclude Include="sprite.h">
       <Filter>Common Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\studio.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="subdiv.h">
       <Filter>Common Header Files</Filter>
     </ClInclude>
     <ClInclude Include="texturesystem.h">
       <Filter>Common Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\tier1\tokenreader.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\tier1\utlbuffer.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\tier1\utllinkedlist.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\tier1\utlmemory.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\tier1\utlrbtree.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\tier1\utlvector.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\mathlib\vector.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\mathlib\vector2d.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\mathlib\vector4d.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\mathlib\vmatrix.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\mathlib\vplane.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\wadtypes.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\worldsize.h">
-      <Filter>Common Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="engine_launcher_api.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\mathlib\amd3dx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\arraystack.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\tier0\basetypes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\bone_setup.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\bspfile.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\bspflags.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\builddisp.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\mathlib\bumpvects.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\cache_user.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\chunkfile.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\cmodel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\collisionutils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\common\ConfigManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk_aux\ConfigManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\const.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\disp_common.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\filesystem.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk_aux\ifilesystemdialog.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\IHammer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\tier1\interface.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\ivraddll.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\keyframe\keyframe.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\mathlib\mathlib.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\ntree.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\s3_intrf.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk_aux\SourceAppInfo.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk_aux\steam.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\studio.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\tier1\tokenreader.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\tier1\utlbuffer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\tier1\utllinkedlist.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\tier1\utlmemory.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\tier1\utlrbtree.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\tier1\utlvector.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\mathlib\vector.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\mathlib\vector2d.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\mathlib\vector4d.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\mathlib\vmatrix.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\mathlib\vplane.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\wadtypes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\worldsize.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\game\shared\iscenetokenprocessor.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -851,9 +866,6 @@
     <ClCompile Include="axes2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\public\bone_setup.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="boundbox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -866,9 +878,6 @@
     <ClCompile Include="bsplightingthread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\public\builddisp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="buildnum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -878,19 +887,10 @@
     <ClCompile Include="childfrm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\public\chunkfile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="clipcode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="clock.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\public\collisionutils.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\ConfigManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="createarch.cpp">
@@ -900,12 +900,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="detailobjects.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\public\disp_common.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\public\disp_powerinfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="dispmanager.cpp">
@@ -944,12 +938,6 @@
     <ClCompile Include="FileChangeWatcher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\public\filesystem_helpers.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\public\filesystem_init.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="FilteredComboBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -986,13 +974,7 @@
     <ClCompile Include="iconcombobox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\public\interpolatortypes.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="keyboard.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\public\keyframe\keyframe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="listboxex.cpp">
@@ -1043,9 +1025,6 @@
     <ClCompile Include="mdiclientwnd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\public\tier0\memoverride.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="messagewnd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1091,9 +1070,6 @@
     <ClCompile Include="richeditctrlex.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\public\rope_physics.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="runcommands.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -1106,22 +1082,13 @@
     <ClCompile Include="ScenePreviewDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\utils\common\scriplib.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Selection.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\public\simple_physics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SoundBrowser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="soundsystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\common\SourceAppInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="splash.cpp">
@@ -1137,9 +1104,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="stocksolids.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\public\studio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="studiomodel.cpp">
@@ -1158,9 +1122,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="titlewnd.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\public\vgui_controls\vgui_controls.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="VGuiWnd.cpp">
@@ -1514,6 +1475,60 @@
     <ClCompile Include="..\sourcesdk\public\tier0\afxmem_override.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\bone_setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\builddisp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\chunkfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\collisionutils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk_aux\ConfigManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\disp_common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\disp_powerinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\filesystem_helpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\filesystem_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\interpolatortypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\keyframe\keyframe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\tier0\memoverride.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\rope_physics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\utils\common\scriplib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\simple_physics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk_aux\SourceAppInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\studio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\vgui_controls\vgui_controls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="hammer.rc">
@@ -1521,58 +1536,58 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\lib\public\bitmap.lib">
+    <Library Include="..\sourcesdk\lib\public\matsys_controls.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\choreoobjects.lib">
+    <Library Include="..\sourcesdk\lib\public\tier0.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\datamodel.lib">
+    <Library Include="..\sourcesdk\lib\public\tier2.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\dme_controls.lib">
+    <Library Include="..\sourcesdk\lib\public\tier1.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\dmserializers.lib">
+    <Library Include="..\sourcesdk\lib\public\tier3.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\fgdlib.lib">
+    <Library Include="..\sourcesdk\lib\public\vgui_controls.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\common\jpeglib.lib">
+    <Library Include="..\sourcesdk\lib\public\vstdlib.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\mathlib.lib">
+    <Library Include="..\sourcesdk_aux\lib\public\dme_controls.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\matsys_controls.lib">
+    <Library Include="..\sourcesdk_aux\lib\public\jpeglib.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\movieobjects.lib">
+    <Library Include="..\sourcesdk_aux\lib\public\movieobjects.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\raytrace.lib">
+    <Library Include="..\sourcesdk\lib\public\steam_api.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\sfmobjects.lib">
+    <Library Include="..\sourcesdk_aux\lib\public\bitmap.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\tier0.lib">
+    <Library Include="..\sourcesdk_aux\lib\public\choreoobjects.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\tier1.lib">
+    <Library Include="..\sourcesdk_aux\lib\public\mathlib.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\tier2.lib">
+    <Library Include="..\sourcesdk_aux\lib\public\raytrace.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\tier3.lib">
+    <Library Include="..\sourcesdk\lib\public\fgdlib.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\vgui_controls.lib">
+    <Library Include="..\sourcesdk_aux\lib\public\dmserializers.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\vstdlib.lib">
+    <Library Include="..\sourcesdk_aux\lib\public\Steam.lib">
       <Filter>Link Libraries</Filter>
     </Library>
   </ItemGroup>

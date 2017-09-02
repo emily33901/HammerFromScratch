@@ -24,7 +24,7 @@
 #include "material.h"
 #include <renderparm.h>
 #include "materialsystem/IMaterialSystemHardwareConfig.h"
-#include "dme_controls\dmecontrols.h"
+#include "dmecontrols.h"
 #include "vphysics_interface.h"
 #include "materialsystem/MaterialSystem_Config.h"
 #include "VGuiWnd.h"

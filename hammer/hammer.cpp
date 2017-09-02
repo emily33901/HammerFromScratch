@@ -55,7 +55,7 @@
 #include "datamodel/idatamodel.h"
 #include "vgui_controls/Controls.h"
 #include "lpreview_thread.h"
-#include "SteamWriteMiniDump.h"
+//#include "SteamWriteMiniDump.h"
 #include "inputsystem/iinputsystem.h"
 #include "datacache/idatacache.h"
 
@@ -141,7 +141,7 @@ int WrapFunctionWithMinidumpHandler( int (*pfn)(void *pParam), void *pParam, int
 	if ( !Plat_IsInDebugSession() && !CommandLine()->FindParm( "-nominidumps") )
 	{
 #ifndef NO_STEAM
-		_set_se_translator( SteamWriteMiniDumpUsingExceptionInfo );
+		//_set_se_translator( SteamWriteMiniDumpUsingExceptionInfo );
 #endif
 		try  // this try block allows the SE translator to work
 		{

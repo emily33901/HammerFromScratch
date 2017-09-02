@@ -17,16 +17,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\lib\public\appframework.lib">
+    <Library Include="..\sourcesdk\lib\public\appframework.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\tier0.lib">
+    <Library Include="..\sourcesdk\lib\public\tier1.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\tier1.lib">
+    <Library Include="..\sourcesdk\lib\public\vstdlib.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\lib\public\vstdlib.lib">
+    <Library Include="..\sourcesdk\lib\public\tier0.lib">
       <Filter>Link Libraries</Filter>
     </Library>
   </ItemGroup>

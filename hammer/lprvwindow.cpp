@@ -91,21 +91,21 @@ void CLightingPreviewResultsWindow::OnPaint(void)
 	{
 		// blit it
 		BITMAPINFOHEADER mybmh;
-		mybmh.biHeight=-g_pLPreviewOutputBitmap->m_nHeight;
+		mybmh.biHeight=-g_pLPreviewOutputBitmap->Width();
 		mybmh.biSize=sizeof(BITMAPINFOHEADER);
 		// now, set up bitmapheader struct for StretchDIB
-		mybmh.biWidth=g_pLPreviewOutputBitmap->m_nWidth;
+		mybmh.biWidth=g_pLPreviewOutputBitmap->Width();
 		mybmh.biPlanes=1;
 		mybmh.biBitCount=32;
 		mybmh.biCompression=BI_RGB;
-		mybmh.biSizeImage=g_pLPreviewOutputBitmap->m_nWidth*g_pLPreviewOutputBitmap->m_nHeight;
+		mybmh.biSizeImage=g_pLPreviewOutputBitmap->Width()*g_pLPreviewOutputBitmap->Width();
 
   
 		StretchDIBits(
 			dc.GetSafeHdc(),clientrect.left,clientrect.top,1+(clientrect.right-clientrect.left),
 			1+(clientrect.bottom-clientrect.top),
-			0,0,g_pLPreviewOutputBitmap->m_nWidth, g_pLPreviewOutputBitmap->m_nHeight,
-			g_pLPreviewOutputBitmap->m_pBits, (BITMAPINFO *) &mybmh,
+			0,0,g_pLPreviewOutputBitmap->Width(), g_pLPreviewOutputBitmap->Width(),
+			g_pLPreviewOutputBitmap->GetBits(), (BITMAPINFO *) &mybmh,
 			DIB_RGB_COLORS, SRCCOPY);
 	}
 }
