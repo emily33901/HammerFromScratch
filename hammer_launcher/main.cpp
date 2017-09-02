@@ -21,6 +21,7 @@
 #include "vgui/isurface.h"
 #include "inputsystem/iinputsystem.h"
 #include "tier0/icommandline.h"
+#include "filesystem_init.h"
 #include "SteamWriteMinidump.h"
 
 //-----------------------------------------------------------------------------

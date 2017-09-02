@@ -814,7 +814,7 @@ void HandleLightingPreview( void )
 //				if ( msg.m_nBitmapGenerationCounter == g_nBitmapGenerationCounter )
 			{
 				g_pLPreviewOutputBitmap = msg.m_pBitmapToDisplay;
-				if ( g_pLPreviewOutputBitmap && (g_pLPreviewOutputBitmap->m_nWidth > 10) )
+				if ( g_pLPreviewOutputBitmap && (g_pLPreviewOutputBitmap->Width() > 10) )
 				{
 					SignalUpdate( EVTYPE_BITMAP_RECEIVED_FROM_LPREVIEW );
 					CLightingPreviewResultsWindow *w=GetMainWnd()->m_pLightingPreviewOutputWindow;
@@ -829,14 +829,14 @@ void HandleLightingPreview( void )
 					RECT existing_rect;
 					w->GetClientRect( &existing_rect );
 					if (
-						(existing_rect.right != g_pLPreviewOutputBitmap->m_nWidth-1) ||
-						(existing_rect.bottom != g_pLPreviewOutputBitmap->m_nHeight-1) )
+						(existing_rect.right != g_pLPreviewOutputBitmap->Width() -1) ||
+						(existing_rect.bottom != g_pLPreviewOutputBitmap->Width() -1) )
 					{
 						CRect myRect;
 						myRect.top=0; 
 						myRect.left=0;
-						myRect.right=g_pLPreviewOutputBitmap->m_nWidth-1;
-						myRect.bottom=g_pLPreviewOutputBitmap->m_nHeight-1;
+						myRect.right=g_pLPreviewOutputBitmap->Width() -1;
+						myRect.bottom=g_pLPreviewOutputBitmap->Width() -1;
 						w->CalcWindowRect(&myRect);
 						w->SetWindowPos(
 							NULL,0,0,

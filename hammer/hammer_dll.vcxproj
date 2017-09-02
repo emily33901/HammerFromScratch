@@ -12,12 +12,15 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2D468BFA-79E6-4E1D-842B-1E0AE60400F2}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <UseOfAtl>Dynamic</UseOfAtl>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -62,7 +65,7 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc hammer_dll.vpc cc1
     <ClCompile>
       <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\common;..\public;..\public\tier0;..\public\tier1;..\common\shaderdll;..\common\iostream;..\dx9sdk\include;..\engine;..\game\shared;..\utils\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\sourcesdk\common;..sourcesdk\\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;..\sourcesdk\common\shaderdll;..\sourcesdk\common\iostream;..\sourcesdk\dx9sdk\include;..\sourcesdk\engine;..\sourcesdk\game\shared;..\sourcesdk\utils\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;VALVE;PROTECTED_THINGS_DISABLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -152,7 +155,7 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc hammer_dll.vpc cc1
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>..\common;..\public;..\public\tier0;..\public\tier1;..\common\shaderdll;..\common\iostream;..\dx9sdk\include;..\engine;..\game\shared;..\utils\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;..\sourcesdk\common\shaderdll;..\sourcesdk\common\iostream;..\sourcesdk\dx9sdk\include;..\sourcesdk\engine;..\sourcesdk\game\shared;..\sourcesdk\utils\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;VALVE;PROTECTED_THINGS_DISABLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>
@@ -262,6 +265,7 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClInclude Include="editgameclass.h" />
     <ClInclude Include="editgameconfigs.h" />
     <ClInclude Include="editgroups.h" />
+    <ClInclude Include="engine_launcher_api.h" />
     <ClInclude Include="entityconnection.h" />
     <ClInclude Include="error3d.h" />
     <ClInclude Include="faceedit_disppage.h" />
@@ -500,7 +504,7 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClInclude Include="..\public\worldsize.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\public\tier0\afxmem_override.cpp" />
+    <ClCompile Include="..\sourcesdk\public\tier0\afxmem_override.cpp" />
     <ClCompile Include="AnchorMgr.cpp" />
     <ClCompile Include="anglebox.cpp" />
     <ClCompile Include="autoselcombo.cpp" />
