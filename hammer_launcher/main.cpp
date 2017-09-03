@@ -93,8 +93,8 @@ bool CHammerApp::Create( )
 		return false;
 
 	//FileSystem_SetupSteamInstallPath();
-	CFSSteamSetupInfo steamInfo;
-	FileSystem_SetupSteamEnvironment(steamInfo);
+	//CFSSteamSetupInfo steamInfo;
+	//FileSystem_SetupSteamEnvironment(steamInfo);
 
 	AppModule_t fileSystemModule = LoadModule( pFileSystemDLL );
 	g_pFileSystem = (IFileSystem*)AddSystem( fileSystemModule, FILESYSTEM_INTERFACE_VERSION );
