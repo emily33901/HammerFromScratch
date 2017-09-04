@@ -42,8 +42,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
-    <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
-    <PreLinkEventUseInBuild>true</PreLinkEventUseInBuild>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
     <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -68,7 +68,7 @@ if exist ..\..\devtools\bin\vpc.exe ..\..\devtools\bin\vpc.exe -crc dme_controls
     </PreBuildEvent>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\common;..\..\public;..\..\public\tier0;..\..\public\tier1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\dme_controls;..\sourcesdk_aux;..\;..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;DMECONTROLS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -101,7 +101,7 @@ if exist ..\..\devtools\bin\vpc.exe ..\..\devtools\bin\vpc.exe -crc dme_controls
     </PreLinkEvent>
     <Lib>
       <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
-      <OutputFile>..\..\lib\public\dme_controls.lib</OutputFile>
+      <OutputFile>..\sourcesdk_aux\lib\public\dme_controls.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Xdcmake>

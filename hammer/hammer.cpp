@@ -5,59 +5,59 @@
 //===========================================================================//
 
 #include "stdafx.h"
+#include <direct.h>
 #include <io.h>
 #include <stdlib.h>
-#include <direct.h>
 #pragma warning(push, 1)
 #pragma warning(disable:4701 4702 4530)
 #include <fstream>
 #pragma warning(pop)
 #include "BuildNum.h"
-#include "EditGameConfigs.h"
-#include "Splash.h"
-#include "Options.h"
-#include "custommessages.h"
-#include "MainFrm.h"
-#include "MessageWnd.h"
 #include "ChildFrm.h"
-#include "MapDoc.h"
-#include "MapView3D.h"
-#include "MapView2D.h"
-#include "PakDoc.h"
-#include "PakViewDirec.h"
-#include "PakFrame.h"
-#include "Prefabs.h"
+#include "EditGameConfigs.h"
+#include "FileSystem.h"
 #include "GlobalFunctions.h"
+#include "Hammer.h"
+#include "HammerVGui.h"
+#include "IHammer.h"
+#include "MainFrm.h"
+#include "MapDoc.h"
+#include "MapView2D.h"
+#include "MapView3D.h"
+#include "MapWorld.h"
+#include "MessageWnd.h"
+#include "Options.h"
+#include "PakDoc.h"
+#include "PakFrame.h"
+#include "PakViewDirec.h"
+#include "Prefabs.h"
 #include "Shell.h"
 #include "ShellMessageWnd.h"
-#include "Options.h"
+#include "Splash.h"
+#include "StudioModel.h"
 #include "TextureSystem.h"
 #include "ToolManager.h"
-#include "Hammer.h"
-#include "StudioModel.h"
-#include "ibsplighting.h"
-#include "statusbarids.h"
-#include "tier0/icommandline.h"
-#include "soundsystem.h"
-#include "IHammer.h"
-#include "op_entity.h"
-#include "tier0/dbg.h"
-#include "materialsystem/imaterialsystemhardwareconfig.h"
+#include "custommessages.h"
 #include "datamodel/dmelementfactoryhelper.h"
-#include "istudiorender.h"
-#include "FileSystem.h"
+#include "datamodel/idatamodel.h"
 #include "engine_launcher_api.h"
 #include "filesystem_init.h"
-#include "utlmap.h"
-#include "progdlg.h"
-#include "MapWorld.h"
-#include "HammerVGui.h"
-#include "datamodel/idatamodel.h"
-#include "vgui_controls/Controls.h"
+#include "ibsplighting.h"
+#include "istudiorender.h"
 #include "lpreview_thread.h"
+#include "materialsystem/imaterialsystemhardwareconfig.h"
+#include "op_entity.h"
+#include "progdlg.h"
+#include "soundsystem.h"
+#include "statusbarids.h"
+#include "tier0/dbg.h"
+#include "tier0/icommandline.h"
+#include "utlmap.h"
+#include "vgui_controls/Controls.h"
 //#include "SteamWriteMiniDump.h"
-#include "inputsystem/iinputsystem.h"
 #include "datacache/idatacache.h"
+#include "inputsystem/iinputsystem.h"
+#include "interface.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include <tier0/memdbgon.h>
@@ -330,6 +330,10 @@ bool CHammer::Connect( CreateInterfaceFn factory )
 	g_pEngineAPI = ( IEngineAPI * )factory( VENGINE_LAUNCHER_API_VERSION, NULL );
 	g_pMDLCache = (IMDLCache*)factory( MDLCACHE_INTERFACE_VERSION, NULL );
     g_Factory = factory;
+
+	
+	CSysModule *materialSystem;
+	Sys_LoadInterface("materialsystem.dll", "VMaterialSystem081", &materialSystem, (void **)&materials);
 
 	if ( !g_pMDLCache || !g_pFileSystem || !g_pFullFileSystem || !materials || !g_pMaterialSystemHardwareConfig || !g_pStudioRender )
 		return false;

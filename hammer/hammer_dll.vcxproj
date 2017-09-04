@@ -25,6 +25,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -38,13 +39,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
-    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</PreBuildEventUseInBuild>
+    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreBuildEventUseInBuild>
     <PreLinkEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</PreLinkEventUseInBuild>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
-    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PostBuildEventUseInBuild>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
     <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreBuildEventUseInBuild>
@@ -65,7 +66,7 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc hammer_dll.vpc cc1
     <ClCompile>
       <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\sourcesdk\common;..sourcesdk\\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;..\sourcesdk\common\shaderdll;..\sourcesdk\common\iostream;..\sourcesdk\dx9sdk\include;..\sourcesdk\engine;..\sourcesdk\game\shared;..\sourcesdk\utils\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;..\sourcesdk\common\shaderdll;..\sourcesdk\common\iostream;..\sourcesdk\dx9sdk\include;..\sourcesdk\engine;..\sourcesdk\game\shared;..\dme_controls\;..\sourcesdk\utils\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;VALVE;PROTECTED_THINGS_DISABLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -96,7 +97,7 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc hammer_dll.vpc cc1
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>winmm.lib;rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;rpcrt4.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
       <OutputFile>$(OutDir)hammer_dll.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -111,6 +112,8 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc hammer_dll.vpc cc1
       </BaseAddress>
       <TargetMachine>MachineX86</TargetMachine>
       <LinkErrorReporting>PromptImmediately</LinkErrorReporting>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <Manifest>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -150,12 +153,12 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc hammer_dll.vpc cc1
 </Command>
     </PreBuildEvent>
     <ClCompile>
-      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/EHa /Zc:ThreadSafeInit- %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;..\sourcesdk\common\shaderdll;..\sourcesdk\common\iostream;..\sourcesdk\dx9sdk\include;..\sourcesdk\engine;..\sourcesdk\game\shared;..\sourcesdk\utils\common;C:\Users\joshua\Documents\GitHub\F1-Hammer\dme_controls;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;..\sourcesdk\common\shaderdll;..\sourcesdk\common\iostream;..\sourcesdk\dx9sdk\include;..\sourcesdk\engine;..\sourcesdk\game\shared;..\sourcesdk\utils\common;..\dme_controls;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;VALVE;PROTECTED_THINGS_DISABLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>
@@ -866,14 +869,14 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <Library Include="..\sourcesdk_aux\lib\public\choreoobjects.lib" />
     <Library Include="..\sourcesdk_aux\lib\public\dme_controls.lib" />
     <Library Include="..\sourcesdk_aux\lib\public\dmserializers.lib" />
-    <Library Include="..\sourcesdk\lib\public\fgdlib.lib" />
+    <Library Include="..\sourcesdk_aux\lib\public\fgdlib.lib" />
     <Library Include="..\sourcesdk_aux\lib\public\jpeglib.lib" />
     <Library Include="..\sourcesdk_aux\lib\public\mathlib.lib" />
     <Library Include="..\sourcesdk\lib\public\matsys_controls.lib" />
     <Library Include="..\sourcesdk_aux\lib\public\movieobjects.lib" />
     <Library Include="..\sourcesdk_aux\lib\public\raytrace.lib" />
     <Library Include="..\sourcesdk\lib\public\tier0.lib" />
-    <Library Include="..\sourcesdk\lib\public\tier1.lib" />
+    <Library Include="..\sourcesdk_aux\lib\public\tier1.lib" />
     <Library Include="..\sourcesdk\lib\public\tier2.lib" />
     <Library Include="..\sourcesdk\lib\public\tier3.lib" />
     <Library Include="..\sourcesdk\lib\public\vgui_controls.lib" />
@@ -963,10 +966,6 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     </ProjectReference>
     <ProjectReference Include="..\mathlib\mathlib.vcxproj">
       <Project>{8be8d44d-b656-40c7-83d2-d51309021093}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\movieobjects\movieobjects.vcxproj">
-      <Project>{135490b9-324a-4bb4-bffa-7c306b919d74}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="..\raytrace\raytrace.vcxproj">

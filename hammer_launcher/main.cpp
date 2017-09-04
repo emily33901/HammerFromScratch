@@ -4,24 +4,23 @@
 //
 //===========================================================================//
 
-#include <windows.h>
-#include <eh.h>
 #include "appframework/AppFramework.h"
-#include "ihammer.h"
-#include "tier0/dbg.h"
-#include "vstdlib/cvar.h"
-#include "filesystem.h"
-#include "materialsystem/imaterialsystem.h"
-#include "istudiorender.h"
-#include "filesystem_init.h"
 #include "datacache/idatacache.h"
 #include "datacache/imdlcache.h"
-#include "vphysics_interface.h"
-#include "vgui/ivgui.h"
-#include "vgui/isurface.h"
-#include "inputsystem/iinputsystem.h"
-#include "tier0/icommandline.h"
+#include "filesystem.h"
 #include "filesystem_init.h"
+#include "ihammer.h"
+#include "inputsystem/iinputsystem.h"
+#include "istudiorender.h"
+#include "materialsystem/imaterialsystem.h"
+#include "tier0/dbg.h"
+#include "tier0/icommandline.h"
+#include "vgui/isurface.h"
+#include "vgui/ivgui.h"
+#include "vphysics_interface.h"
+#include "vstdlib/cvar.h"
+#include <eh.h>
+#include <windows.h>
 //#include "SteamWriteMinidump.h"
 
 //-----------------------------------------------------------------------------
@@ -43,6 +42,17 @@ struct _EXCEPTION_POINTERS * pExceptionInfo
 	// TODO: dynamically set the minidump comment from contextual info about the crash (i.e current VPROF node)?
 	//SteamWriteMiniDumpUsingExceptionInfoWithBuildId( uStructuredExceptionCode, pExceptionInfo, 0 );
 #endif
+}
+
+
+void CommandLine_AppendParm(const char *string)
+{
+	// interface version differences between tier0.lib and tier0.dll in TF2
+	typedef void(__thiscall *AppendParmFn)(void *, const char *);
+
+	AppendParmFn fn = (AppendParmFn)((*(DWORD **)CommandLine())[5]);
+
+	return fn(CommandLine(), string);
 }
 
 
@@ -77,7 +87,8 @@ DEFINE_WINDOWED_APPLICATION_OBJECT_GLOBALVAR( g_ApplicationObject );
 bool CHammerApp::Create( )
 {
 	// Save some memory so engine/hammer isn't so painful
-	CommandLine()->AppendParm( "-disallowhwmorph", NULL );
+	//CommandLine()->AppendParm( "-disallowhwmorph", NULL );
+	CommandLine_AppendParm("-disallowhwmorph");
 
 	IAppSystem *pSystem;
 
@@ -101,7 +112,7 @@ bool CHammerApp::Create( )
 
 	AppSystemInfo_t appSystems[] = 
 	{
-		{ "materialsystem.dll",		MATERIAL_SYSTEM_INTERFACE_VERSION },
+		{ "materialsystem_v80.dll",		MATERIAL_SYSTEM_INTERFACE_VERSION },
 		{ "inputsystem.dll",		INPUTSYSTEM_INTERFACE_VERSION },
 		{ "studiorender.dll",		STUDIO_RENDER_INTERFACE_VERSION },
 		{ "vphysics.dll",			VPHYSICS_INTERFACE_VERSION },

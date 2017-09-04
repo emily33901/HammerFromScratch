@@ -1545,9 +1545,6 @@
     <Library Include="..\sourcesdk\lib\public\tier2.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\sourcesdk\lib\public\tier1.lib">
-      <Filter>Link Libraries</Filter>
-    </Library>
     <Library Include="..\sourcesdk\lib\public\tier3.lib">
       <Filter>Link Libraries</Filter>
     </Library>
@@ -1581,13 +1578,16 @@
     <Library Include="..\sourcesdk_aux\lib\public\raytrace.lib">
       <Filter>Link Libraries</Filter>
     </Library>
-    <Library Include="..\sourcesdk\lib\public\fgdlib.lib">
-      <Filter>Link Libraries</Filter>
-    </Library>
     <Library Include="..\sourcesdk_aux\lib\public\dmserializers.lib">
       <Filter>Link Libraries</Filter>
     </Library>
     <Library Include="..\sourcesdk_aux\lib\public\Steam.lib">
+      <Filter>Link Libraries</Filter>
+    </Library>
+    <Library Include="..\sourcesdk_aux\lib\public\fgdlib.lib">
+      <Filter>Link Libraries</Filter>
+    </Library>
+    <Library Include="..\sourcesdk_aux\lib\public\tier1.lib">
       <Filter>Link Libraries</Filter>
     </Library>
   </ItemGroup>

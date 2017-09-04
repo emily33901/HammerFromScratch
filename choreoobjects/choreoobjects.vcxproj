@@ -41,8 +41,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
-    <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
-    <PreLinkEventUseInBuild>true</PreLinkEventUseInBuild>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
     <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
@@ -73,7 +73,7 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc choreoobjects.vpc 
     </PreBuildEvent>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\common;..\public;..\public\tier0;..\public\tier1;..\game\shared;..\utils\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;..\sourcesdk\game\shared;..\sourcesdk\utils\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
@@ -105,7 +105,7 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc choreoobjects.vpc 
     </PreLinkEvent>
     <Lib>
       <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
-      <OutputFile>..\lib\public\choreoobjects.lib</OutputFile>
+      <OutputFile>..\sourcesdk_aux\lib\public\choreoobjects.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Xdcmake>
