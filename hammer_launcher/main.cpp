@@ -19,7 +19,9 @@
 #include "vgui/ivgui.h"
 #include "vphysics_interface.h"
 #include "vstdlib/cvar.h"
+#include <direct.h>
 #include <eh.h>
+#include <stdlib.h>
 #include <windows.h>
 //#include "SteamWriteMinidump.h"
 
@@ -86,9 +88,11 @@ DEFINE_WINDOWED_APPLICATION_OBJECT_GLOBALVAR( g_ApplicationObject );
 //-----------------------------------------------------------------------------
 bool CHammerApp::Create( )
 {
+	_chdir("..");
+
 	// Save some memory so engine/hammer isn't so painful
-	//CommandLine()->AppendParm( "-disallowhwmorph", NULL );
-	CommandLine_AppendParm("-disallowhwmorph");
+	CommandLine()->AppendParm( "-disallowhwmorph", NULL );
+	//CommandLine_AppendParm("-disallowhwmorph");
 
 	IAppSystem *pSystem;
 
@@ -99,29 +103,26 @@ bool CHammerApp::Create( )
 		return false;
 	
 	bool bSteam;
-	char pFileSystemDLL[MAX_PATH];
-	if ( FileSystem_GetFileSystemDLLName( pFileSystemDLL, MAX_PATH, bSteam ) != FS_OK )
-		return false;
-
-	//FileSystem_SetupSteamInstallPath();
-	//CFSSteamSetupInfo steamInfo;
-	//FileSystem_SetupSteamEnvironment(steamInfo);
+	//char pFileSystemDLL[MAX_PATH];
+	//if ( FileSystem_GetFileSystemDLLName( pFileSystemDLL, MAX_PATH, bSteam ) != FS_OK )
+	//	return false;
+	const char *pFileSystemDLL = "forgery\\filesystem_stdio.dll";
 
 	AppModule_t fileSystemModule = LoadModule( pFileSystemDLL );
 	g_pFileSystem = (IFileSystem*)AddSystem( fileSystemModule, FILESYSTEM_INTERFACE_VERSION );
 
 	AppSystemInfo_t appSystems[] = 
 	{
-		{ "materialsystem_v80.dll",		MATERIAL_SYSTEM_INTERFACE_VERSION },
-		{ "inputsystem.dll",		INPUTSYSTEM_INTERFACE_VERSION },
+		{ "forgery\\materialsystem.dll",			MATERIAL_SYSTEM_INTERFACE_VERSION },
+		{ "inputsystem.dll",			INPUTSYSTEM_INTERFACE_VERSION },
 		{ "studiorender.dll",		STUDIO_RENDER_INTERFACE_VERSION },
 		{ "vphysics.dll",			VPHYSICS_INTERFACE_VERSION },
 		{ "datacache.dll",			DATACACHE_INTERFACE_VERSION },
 		{ "datacache.dll",			MDLCACHE_INTERFACE_VERSION },
 		{ "datacache.dll",			STUDIO_DATA_CACHE_INTERFACE_VERSION },
-		{ "vguimatsurface.dll",		VGUI_SURFACE_INTERFACE_VERSION },
+		{ "forgery\\vguimatsurface.dll",		VGUI_SURFACE_INTERFACE_VERSION },
 		{ "vgui2.dll",				VGUI_IVGUI_INTERFACE_VERSION },
-		{ "hammer_dll.dll",			INTERFACEVERSION_HAMMER },
+		{ "forgery\\hammer_dll.dll",	INTERFACEVERSION_HAMMER },
 		{ "", "" }	// Required to terminate the list
 	};
 
