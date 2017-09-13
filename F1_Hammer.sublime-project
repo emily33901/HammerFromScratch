@@ -1,0 +1,55 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+
+	"msbuild_selector":
+	{
+		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\MSBuild\\15.0\\Bin\\MsBuild.exe",
+	    "patterns":    
+	    [
+	        "*/*.vcxproj",
+	        "*/*.sln"
+	    ],
+	    "projects":
+	    [
+	    	{
+	    		"name": "F1_Hammer",
+	    		"file_name": "F1_Hammer.sln",
+	    		"directory": ".\\"
+	    	}
+	    ],
+	    "platforms":
+	    [
+	    	"x86"
+	    ],
+	    "configurations":
+	    [
+	    	"Release"
+	    ]
+	},
+
+	"linters":
+	{
+		"clang": {
+            "include_dirs": [
+                "${project_folder}/sourcesdk/public",
+                "${project_folder}/sourcesdk/public/tier0",
+                "${project_folder}/sourcesdk/public/tier1",
+                "${project_folder}/sourcesdk/public/tier2",
+                "${project_folder}/sourcesdk/public/tier3",
+                "${project_folder}/sourcesdk/public/vstdlib",
+                "${project_folder}/sourcesdk/public/vgui_controls",
+                "${project_folder}/sourcesdk/public/shared/sdk",
+                "${project_folder}/sourcesdk/public/client/sdk",
+                "${project_folder}/sourcesdk/public/shared",
+                "${project_folder}/sourcesdk/public/inputsystem",
+                "${project_folder}/sourcesdk/public/vgui",
+                "${project_folder}/sourcesdk/common"
+            ]
+        }
+	}
+}

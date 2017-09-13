@@ -211,9 +211,9 @@ void BoundBox::GetBoundsSize(Vector& size)
 //			iGridSize - 
 // Output : 
 //-----------------------------------------------------------------------------
-static int Snap(/*int*/ float iValue, int iGridSize)
+static float Snap(/*int*/ float flValue, float flGridSize)
 {
-	return (int)(rint(iValue/iGridSize) * iGridSize);
+	return (float)(rintf(flValue/flGridSize) * flGridSize);
 }
 
 
@@ -221,7 +221,7 @@ static int Snap(/*int*/ float iValue, int iGridSize)
 // Purpose: 
 // Input  : iGridSize - 
 //-----------------------------------------------------------------------------
-void BoundBox::SnapToGrid(int iGridSize)
+void BoundBox::SnapToGrid(float flGridSize)
 {
 	// does not alter the size of the box .. snaps its minimal coordinates
 	//  to the grid size specified in iGridSize
@@ -230,7 +230,7 @@ void BoundBox::SnapToGrid(int iGridSize)
 
 	for(int i = 0; i < 3; i++)
 	{
-		bmins[i] = (float)Snap(/* YWB (int)*/bmins[i], iGridSize);
+		bmins[i] = (float)Snap(/* YWB (int)*/bmins[i], flGridSize);
 		bmaxs[i] = bmins[i] + size[i];
 	}
 }

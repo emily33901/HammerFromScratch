@@ -1,0 +1,7 @@
+F1_Hammer Changelog:
+
+* changed texture scale to display at infinite precision (within reasonable floating point limits)
+* fixed a buffer overflow in the texture finder window
+* changed some tools to display their values with greater that 1dp of precision if required
+
++ allow for less than `1` snap to grid (to an arbitrary minimum of 1/32 unit)

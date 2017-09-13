@@ -46,18 +46,6 @@ struct _EXCEPTION_POINTERS * pExceptionInfo
 #endif
 }
 
-
-void CommandLine_AppendParm(const char *string)
-{
-	// interface version differences between tier0.lib and tier0.dll in TF2
-	typedef void(__thiscall *AppendParmFn)(void *, const char *);
-
-	AppendParmFn fn = (AppendParmFn)((*(DWORD **)CommandLine())[5]);
-
-	return fn(CommandLine(), string);
-}
-
-
 //-----------------------------------------------------------------------------
 // The application object
 //-----------------------------------------------------------------------------
@@ -91,7 +79,7 @@ bool CHammerApp::Create( )
 	_chdir("..");
 
 	// Save some memory so engine/hammer isn't so painful
-	CommandLine()->AppendParm( "-disallowhwmorph", NULL );
+	CommandLine()->AppendParm("-disallowhwmorph", NULL);
 	//CommandLine_AppendParm("-disallowhwmorph");
 
 	IAppSystem *pSystem;
@@ -101,28 +89,30 @@ bool CHammerApp::Create( )
 	pSystem = AddSystem( cvarModule, CVAR_INTERFACE_VERSION );
 	if ( !pSystem )
 		return false;
-	
-	bool bSteam;
-	//char pFileSystemDLL[MAX_PATH];
-	//if ( FileSystem_GetFileSystemDLLName( pFileSystemDLL, MAX_PATH, bSteam ) != FS_OK )
-	//	return false;
-	const char *pFileSystemDLL = "forgery\\filesystem_stdio.dll";
 
-	AppModule_t fileSystemModule = LoadModule( pFileSystemDLL );
-	g_pFileSystem = (IFileSystem*)AddSystem( fileSystemModule, FILESYSTEM_INTERFACE_VERSION );
+	//const char *pFileSystemDLL = "forgery\\filesystem_steam.dll";
+
+	bool bSteam = false;
+	char pFileSystemDLL[MAX_PATH];
+	if (FileSystem_GetFileSystemDLLName(pFileSystemDLL, MAX_PATH, bSteam) != FS_OK)
+		return false;
+
+	AppModule_t fileSystemModule = LoadModule("filesystem_stdio.dll");
+	g_pFileSystem = (IFileSystem*)AddSystem( fileSystemModule, "VFileSystem022" );
 
 	AppSystemInfo_t appSystems[] = 
 	{
-		{ "forgery\\materialsystem.dll",			MATERIAL_SYSTEM_INTERFACE_VERSION },
-		{ "inputsystem.dll",			INPUTSYSTEM_INTERFACE_VERSION },
-		{ "studiorender.dll",		STUDIO_RENDER_INTERFACE_VERSION },
-		{ "vphysics.dll",			VPHYSICS_INTERFACE_VERSION },
-		{ "datacache.dll",			DATACACHE_INTERFACE_VERSION },
-		{ "datacache.dll",			MDLCACHE_INTERFACE_VERSION },
-		{ "datacache.dll",			STUDIO_DATA_CACHE_INTERFACE_VERSION },
-		{ "forgery\\vguimatsurface.dll",		VGUI_SURFACE_INTERFACE_VERSION },
-		{ "vgui2.dll",				VGUI_IVGUI_INTERFACE_VERSION },
-		{ "forgery\\hammer_dll.dll",	INTERFACEVERSION_HAMMER },
+		{ "forgery\\materialsystem.dll",	MATERIAL_SYSTEM_INTERFACE_VERSION },
+		//{ "materialsystem.dll",			"VMaterialSystem081" },
+		{ "forgery\\inputsystem.dll",		INPUTSYSTEM_INTERFACE_VERSION },
+		{ "forgery\\studiorender.dll",		STUDIO_RENDER_INTERFACE_VERSION },
+		{ "vphysics.dll",					VPHYSICS_INTERFACE_VERSION },
+		{ "forgery\\datacache.dll",			DATACACHE_INTERFACE_VERSION },
+		{ "forgery\\datacache.dll",			MDLCACHE_INTERFACE_VERSION },
+		{ "forgery\\datacache.dll",			STUDIO_DATA_CACHE_INTERFACE_VERSION },
+		{ "forgery\\vguimatsurface.dll",	VGUI_SURFACE_INTERFACE_VERSION },
+		{ "forgery\\vgui2.dll",				VGUI_IVGUI_INTERFACE_VERSION },
+		{ "forgery\\hammer_dll.dll",		INTERFACEVERSION_HAMMER },
 		{ "", "" }	// Required to terminate the list
 	};
 
@@ -136,7 +126,7 @@ bool CHammerApp::Create( )
 	g_pInputSystem = (IInputSystem*)FindSystem( INPUTSYSTEM_INTERFACE_VERSION );
 
 	// This has to be done before connection.
-	g_pMaterialSystem->SetShaderAPI( "shaderapidx9.dll" );
+	g_pMaterialSystem->SetShaderAPI( "forgery\\shaderapidx9.dll" );
 
 	return true;
 }
@@ -187,37 +177,34 @@ bool CHammerApp::PreInit( )
 		steamInfo.m_bOnlyUseDirectoryName = true;
 		steamInfo.m_bToolsMode = true;
 		steamInfo.m_bSetSteamDLLPath = true;
-		steamInfo.m_bSteam = g_pFileSystem->IsSteam();
+		steamInfo.m_bSteam = /*g_pFileSystem->IsSteam()*/ true;
 		if ( FileSystem_SetupSteamEnvironment( steamInfo ) != FS_OK )
 		{
 			MessageBox( NULL, "Failed to setup steam environment.", "Error", MB_OK );
 			return false;
 		}
 
-		CFSMountContentInfo fsInfo;
-		fsInfo.m_pFileSystem = g_pFileSystem;
-		fsInfo.m_bToolsMode = true;
-		fsInfo.m_pDirectoryName = steamInfo.m_GameInfoPath;
-		if ( !fsInfo.m_pDirectoryName )
-		{
-			Error( "FileSystem_LoadFileSystemModule: no -defaultgamedir or -game specified." );
-		}
+		// F1ssi0N:
+		// becuase filesystem expects a sane file structure
+		// and what we dont have is a sane file structure
+		// we cant rely on it to mount content properly
 
-		if ( FileSystem_MountContent( fsInfo ) == FS_OK )
-		{
-			bDone = true;
-		}
-		else
-		{
-			char str[512];
-			Q_snprintf( str, sizeof( str ), "%s", FileSystem_GetLastErrorString() );
-			MessageBox( NULL, str, "Warning", MB_OK );
+		char vproject_path[MAX_PATH];
+		Q_snprintf(vproject_path, MAX_PATH, "\"%s\"", steamInfo.m_pDirectoryName);
 
-			if ( g_pHammer->RequestNewConfig() == REQUEST_QUIT )
-				return false;
-		}
+		CommandLine()->AppendParm("-vproject", vproject_path);
+		FileSystem_UseVProjectBinDir(true);
 
-		FileSystem_AddSearchPath_Platform( fsInfo.m_pFileSystem, steamInfo.m_GameInfoPath );
+		CFSSearchPathsInit searchPaths;
+
+		searchPaths.m_bLowViolence = false;
+		searchPaths.m_bMountHDContent = true;
+		searchPaths.m_pDirectoryName = steamInfo.m_pDirectoryName;
+		searchPaths.m_pFileSystem = g_pFileSystem;
+
+		FileSystem_LoadSearchPaths(searchPaths);
+
+		bDone = true;
 
 	} while (!bDone);
 

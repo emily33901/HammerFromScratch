@@ -89,7 +89,7 @@ bool CToolMaterial::OnLMouseDown3D(CMapView3D *pView, UINT nFlags, const Vector2
 		// No clear if CTRL pressed.
 		if (GetAsyncKeyState(VK_CONTROL) & 0x8000)
 		{
-			cmd &= ~scClear;	
+			cmd &= ~scClear;
 		}
 
 		// If they are holding down SHIFT, select the entire solid.

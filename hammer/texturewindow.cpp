@@ -9,14 +9,14 @@
 #pragma warning(disable:4701 4702 4530)
 #include <fstream>
 #pragma warning(pop)
-#include "hammer.h"
-#include "TextureWindow.h"
-#include "TextureBrowser.h"
 #include "CustomMessages.h"
-#include "IEditorTexture.h"
 #include "GameConfig.h"
 #include "GlobalFunctions.h"
+#include "IEditorTexture.h"
+#include "TextureBrowser.h"
 #include "TextureSystem.h"
+#include "TextureWindow.h"
+#include "hammer.h"
 #include "materialsystem/IMaterial.h"
 #include "materialsystem/IMaterialSYstem.h"
 
@@ -479,8 +479,8 @@ void CTextureWindow::OnPaint(void)
 	BOOL bFoundHighlight = FALSE;
 	rectHighlight.left = -1;
 	BOOL bFirst = TRUE;
-	char szDrawTexture[128];
-	char szFirstDrawnTexture[128];
+	char szDrawTexture[512];
+	char szFirstDrawnTexture[512];
 
 	while (bNotDone)
 	{

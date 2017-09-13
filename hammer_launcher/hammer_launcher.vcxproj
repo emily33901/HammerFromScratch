@@ -68,7 +68,7 @@ if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc hammer_launcher.vp
       <AdditionalOptions>/EHa  %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_DLL_EXT=.dll;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
       <ExceptionHandling>
@@ -246,7 +246,7 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\sourcesdk\lib\public\appframework.lib" />
+    <Library Include="..\sourcesdk_aux\lib\public\appframework.lib" />
     <Library Include="..\sourcesdk\lib\public\tier0.lib" />
     <Library Include="..\sourcesdk\lib\public\tier1.lib" />
     <Library Include="..\sourcesdk\lib\public\vstdlib.lib" />

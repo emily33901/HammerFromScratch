@@ -238,6 +238,7 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\hammer_tool\IBaseTool.h" />
     <ClInclude Include="..\sourcesdk\game\shared\iscenetokenprocessor.h" />
     <ClInclude Include="..\sourcesdk_aux\ConfigManager.h" />
     <ClInclude Include="..\sourcesdk_aux\ifilesystemdialog.h" />
@@ -885,6 +886,7 @@ call ..\devtools\bin\vsign.bat -noforcewritable ..\..\game\bin\$(TargetFileName)
     <Library Include="..\sourcesdk_aux\lib\public\Steam.lib" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\CHANGELOG" />
     <None Include="hammer_dll.vpc" />
     <None Include="res\afx_idi_.ico" />
     <None Include="res\bitmap1.bmp" />

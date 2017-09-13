@@ -10,10 +10,10 @@
 #pragma once
 #endif
 
-#include "MapClass.h"
-#include "Selection.h"
-#include "MapEntity.h"
 #include "GameConfig.h"
+#include "MapClass.h"
+#include "MapEntity.h"
+#include "Selection.h"
 #include "filesystem.h"
 #include "tier1/utlrbtree.h"
 #include "tier1/utlstack.h"
@@ -290,7 +290,7 @@ class CMapDoc : public CDocument
 		inline MAPFORMAT GetMapFormat(void);
 		inline CMapWorld *GetMapWorld(void);
 		inline CGameConfig *GetGame(void);
-		inline int GetGridSpacing(void) { return(max(m_nGridSpacing, 1)); }
+		inline float GetGridSpacing(void) { return(m_bSubDivide ? 1.0f / m_nGridSpacing : m_nGridSpacing); }
 
 		inline CHistory *GetDocHistory(void);
 
@@ -441,6 +441,8 @@ class CMapDoc : public CDocument
 		// Tools:
 		CToolManager *m_pToolManager;
 
+		// set m_bSubDivide to true if you want values less than 1
+		bool m_bSubDivide;
 		int m_nGridSpacing;
 
 		bool m_bDispSolidDrawMask;

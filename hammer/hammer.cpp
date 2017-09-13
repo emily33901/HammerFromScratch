@@ -333,7 +333,7 @@ bool CHammer::Connect( CreateInterfaceFn factory )
 
 	
 	CSysModule *materialSystem;
-	Sys_LoadInterface("materialsystem.dll", MATERIAL_SYSTEM_INTERFACE_VERSION, &materialSystem, (void **)&materials);
+	Sys_LoadInterface("forgery\\materialsystem.dll", MATERIAL_SYSTEM_INTERFACE_VERSION, &materialSystem, (void **)&materials);
 
 	if ( !g_pMDLCache || !g_pFileSystem || !g_pFullFileSystem || !materials || !g_pMaterialSystemHardwareConfig || !g_pStudioRender )
 		return false;

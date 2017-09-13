@@ -1,0 +1,1829 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"corr",
+				"correctionOut"
+			],
+			[
+				"rodata",
+				"rodataChunks"
+			],
+			[
+				"re",
+				"rebases\tconst int & rebases() const"
+			],
+			[
+				"seg",
+				"segments\tconst int & segments() const"
+			],
+			[
+				"sym",
+				"symbolInfo\tSymbolInfo symbolInfo"
+			],
+			[
+				"localWeapon",
+				"localWeaponHelper"
+			],
+			[
+				"Recurse",
+				"RecurseCall_processEntity"
+			],
+			[
+				"Unhandle",
+				"UnhandledExceptionHandler"
+			],
+			[
+				"f1_",
+				"f1_debuglagcompensation"
+			],
+			[
+				"s_b",
+				"s_bExtrapolate"
+			],
+			[
+				"cl_interpol",
+				"cl_interpolate"
+			],
+			[
+				"Process",
+				"ProcessInterpolationList"
+			],
+			[
+				"backup",
+				"backupInterpolationList"
+			],
+			[
+				"g_",
+				"g_TeleportList"
+			],
+			[
+				"GetColl",
+				"GetCollideableMaxs"
+			],
+			[
+				"GetC",
+				"GetCycle"
+			],
+			[
+				"exceptio",
+				"exceptionInformation"
+			],
+			[
+				"trans",
+				"translations"
+			],
+			[
+				"szF",
+				"szFullName"
+			],
+			[
+				"szFile",
+				"szFile"
+			],
+			[
+				"skip",
+				"skipAmt"
+			],
+			[
+				"register",
+				"registerCUserCmd"
+			],
+			[
+				"attact",
+				"attach_to_rootbone"
+			],
+			[
+				"respone",
+				"responseText"
+			],
+			[
+				"itemF",
+				"itemFileHandle"
+			],
+			[
+				"for",
+				"forp\tfor k,v in pairs()"
+			],
+			[
+				"ivC",
+				"ivClientMode"
+			],
+			[
+				"loca",
+				"getLocation"
+			],
+			[
+				"LUA_TBOOL",
+				"LUA_TBOOLEAN"
+			],
+			[
+				"Hooked",
+				"Hooked_CreateMoveThunk"
+			],
+			[
+				"cmd",
+				"command_number"
+			],
+			[
+				"ty",
+				"tk_type"
+			],
+			[
+				"gpE",
+				"gpEntList"
+			],
+			[
+				"dum",
+				"dumpProp"
+			],
+			[
+				"gvp",
+				"gvpClient"
+			],
+			[
+				"client",
+				"clientModule"
+			],
+			[
+				"TF",
+				"TF_COND_ZOOMED"
+			],
+			[
+				"getO",
+				"getOffset3"
+			],
+			[
+				"Ac",
+				"activeWeaponOffset"
+			],
+			[
+				"getT",
+				"gettime"
+			],
+			[
+				"activeW",
+				"activeWeapon"
+			],
+			[
+				"act",
+				"activeWeaponIndex"
+			],
+			[
+				"active",
+				"activeWeapon"
+			],
+			[
+				"acti",
+				"activeWeapon"
+			],
+			[
+				"tr",
+				"trigger"
+			],
+			[
+				"LI",
+				"locEntIndex"
+			],
+			[
+				"is",
+				"isNull"
+			],
+			[
+				"local",
+				"localEntity"
+			],
+			[
+				"getB",
+				"getByte"
+			],
+			[
+				"ent",
+				"entity"
+			],
+			[
+				"index",
+				"index"
+			],
+			[
+				"loopE",
+				"loopEntList"
+			],
+			[
+				"GetL",
+				"GetLocalPlayer"
+			],
+			[
+				"vec",
+				"vecScreen"
+			],
+			[
+				"wea",
+				"weapName"
+			],
+			[
+				"g",
+				"get"
+			],
+			[
+				"back",
+				"backstab"
+			],
+			[
+				"IN_",
+				"IN_ATTACK"
+			],
+			[
+				"user",
+				"userCmd"
+			],
+			[
+				"backs",
+				"backstabOffset"
+			],
+			[
+				"interf",
+				"interface"
+			],
+			[
+				"get",
+				"getInt"
+			],
+			[
+				"flas",
+				"flagsOffset"
+			],
+			[
+				"locE",
+				"locEntity"
+			],
+			[
+				"fla",
+				"flagsOffset"
+			],
+			[
+				"C",
+				"Console"
+			],
+			[
+				"loc",
+				"locEntIndex"
+			],
+			[
+				"Netvar",
+				"Netvar"
+			],
+			[
+				"bu",
+				"bunnyhop"
+			],
+			[
+				"lo",
+				"locEntIndex"
+			],
+			[
+				"b",
+				"buttons"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "F1_Hammer.vcxproj",
+			"settings":
+			{
+				"buffer_size": 5647,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "hammer_launcher/hammer_launcher.vcxproj",
+			"settings":
+			{
+				"buffer_size": 15298,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "F1_Hammer.sublime-project",
+			"settings":
+			{
+				"buffer_size": 1385,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/joshua/Documents/GitHub/F12016/F1/F1Cheat.sublime-project",
+			"settings":
+			{
+				"buffer_size": 1520,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hammer/hammer_dll.vcxproj",
+			"settings":
+			{
+				"buffer_size": 49882,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sourcesdk/public/tier0/icommandline.h",
+			"settings":
+			{
+				"buffer_size": 2202,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/joshua/AppData/Local/Temp/0555fb94-7367-4533-9ca7-7764e4ea5eab/var/www/html/api/v1/MyAPI.php",
+			"settings":
+			{
+				"buffer_size": 21910,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "hammer/hammer.cpp",
+			"settings":
+			{
+				"buffer_size": 61244,
+				"encoding": "Western (Windows 1252)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "hammer_launcher/main.cpp",
+			"settings":
+			{
+				"buffer_size": 7099,
+				"encoding": "Western (Windows 1252)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "appframework/appframework.vcxproj",
+			"settings":
+			{
+				"buffer_size": 10717,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/C++ Starting Kit/C++ - Starting Kit.sublime-build",
+					""
+				],
+				[
+					"Packages/C++ Starting Kit/C++ - Starting Kit.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/C++11/C++11.sublime-build",
+					""
+				],
+				[
+					"Packages/C++11/C++11.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/MSBuild selector/MSBuildSelector.sublime-build",
+					""
+				],
+				[
+					"Packages/User/build_f1.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/MSBuild selector/MSBuildSelector.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 92.0,
+		"last_filter": "syntax json",
+		"selected_items":
+		[
+			[
+				"syntax json",
+				"Set Syntax: JSON"
+			],
+			[
+				"syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"cancel",
+				"Build: Cancel"
+			],
+			[
+				"linter",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"package control install",
+				"Package Control: Install Package"
+			],
+			[
+				"text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"package dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"c++11",
+				"Set Syntax: C++11"
+			],
+			[
+				"SYNTAX",
+				"Set Syntax: C++"
+			],
+			[
+				"C++",
+				"Set Syntax: C++11"
+			],
+			[
+				"colors",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"material",
+				"Material Theme: Activate theme"
+			],
+			[
+				"material theme",
+				"Material Theme: Activate theme"
+			],
+			[
+				"Mta",
+				"Material Theme: Activate theme"
+			],
+			[
+				"packageinstall ",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"package install ",
+				"Package Control: Install Package"
+			],
+			[
+				"cance",
+				"Build: Cancel"
+			],
+			[
+				"build can",
+				"Build: Cancel"
+			],
+			[
+				"msbuild",
+				"MSBuildSelector: Build project"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"build",
+				"Build With: MSBuildSelector"
+			],
+			[
+				"syntax c++",
+				"Set Syntax: C++"
+			],
+			[
+				"disable ",
+				"Package Control: Disable Package"
+			],
+			[
+				"c",
+				"Set Syntax: C"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"mrkdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"l",
+				"Set Syntax: Lua"
+			],
+			[
+				"lua",
+				"Set Syntax: Lua"
+			],
+			[
+				"syntax lua",
+				"Set Syntax: Lua"
+			],
+			[
+				"syntax javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"syntax c",
+				"Set Syntax: C++"
+			]
+		],
+		"width": 406.0
+	},
+	"console":
+	{
+		"height": 132.0,
+		"history":
+		[
+			"print(${project_folder})",
+			"print",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/joshua/Documents/GitHub/F1_hammer"
+	],
+	"file_history":
+	[
+		"/C/Users/joshua/Documents/stylesheet.css",
+		"/C/Users/joshua/Documents/parallax.html",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CAimHelper.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/Util.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/Client.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CHack.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/WindowsProxy.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/SDK_Linux.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F12017-premake.vcxproj",
+		"/C/Users/joshua/AppData/Local/Temp/0555fb94-7367-4533-9ca7-7764e4ea5eab/root/src/vtable/main.cpp",
+		"/C/Users/joshua/AppData/Local/Temp/0555fb94-7367-4533-9ca7-7764e4ea5eab/var/www/html/vtable/worker.js",
+		"/C/Users/joshua/AppData/Local/Temp/0555fb94-7367-4533-9ca7-7764e4ea5eab/var/www/html/vtable/index.html",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CHack.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/projectile.cpp",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/root/src/vtable/mach-o.cc",
+		"/C/Users/joshua/AppData/Local/Temp/0555fb94-7367-4533-9ca7-7764e4ea5eab/root/src/vtable/mach-o.h",
+		"/C/Users/joshua/AppData/Local/Temp/0555fb94-7367-4533-9ca7-7764e4ea5eab/var/www/html/vtable/vtable.js",
+		"/C/Users/joshua/AppData/Local/Temp/0555fb94-7367-4533-9ca7-7764e4ea5eab/root/src/vtable/include/mach-o/loader.h",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/root/src/libmacho/ld-mac.cc",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/root/src/libmacho/Makefile",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/root/src/vtable/Makefile",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/root/src/vtable/main.cpp",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/root/src/libmacho/main.cpp",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/root/src/vtable/worker.js",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/root/src/libmacho/env_flags.h",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/root/src/libmacho/mach-o.h",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/root/src/libmacho/mach-o.cc",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/root/src/libmacho/log.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/ClassId.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/backtrace.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/F1Cheat.sublime-project",
+		"/C/Users/joshua/Documents/GitHub/F12016/F12017.vcxproj",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CEsp.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/WeaponHelper.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/Aimbot.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/Aimbot.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/projectile.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/DLLMain.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/TargetManager.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CAntiSmac.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/Launcher/redist/f1launcher_scheme.res",
+		"/C/Users/joshua/Documents/GitHub/F12016/Launcher/redist/F1Launcher.res",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/F1_Vprof.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/Knife/KnifeMain.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/Launcher/main.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CEsp.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/Launcher/redist/OptionsList.txt",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/root/src/f1cheat-bot/index.js",
+		"/C/Users/joshua/AppData/Local/Temp/8c871c1a-adbf-42f7-9ba4-2be585655a31/var/www/html/api/v1/MyAPI.php",
+		"/C/Users/joshua/Documents/GitHub/F12016/Launcher/redist/GameInfo.txt",
+		"/C/Users/joshua/Documents/GitHub/F12016/DLLProcessor/main.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/F1_Cache.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/F1_Glow.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/F1_Glow.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/LagCompensation.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/LagCompensation.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CPureBypass.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CPureBypass.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CAutoAirblast.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/Panels.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/IHack.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CAutoAirblast.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/SDK.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/backtrace.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CPlayerManager.cpp",
+		"/C/Users/joshua/AppData/Local/Temp/Rar$DIa0.627/README.md",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/F1_ConVar.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/F1_VGUIMenu.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CommonControls.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/F1_ConVar.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/sourcesdk/vgui2/vgui_controls/Panel.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/sourcesdk/game/client/vgui_basepanel.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/sourcesdk/public/mathlib/vector.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/sourcesdk/public/tier0/threadtools.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/demo.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/SDK_Win32.cpp",
+		"/C/Users/joshua/AppData/Roaming/Sublime Text 3/Packages/Colorsublime - Themes/HalfLife.tmTheme",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/SetupBones.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/DynamicNetvars.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/TargetManager.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/DynamicNetvars.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/SDK_Shared.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CritHelper.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CMisc.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CAntiaim.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/#F1_Glow.cpp#",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CBackstab.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CGlow.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CRadar.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/SourceSDK.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/CDrawManager.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/SourceSDK.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/CAntiSmac.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/Trace.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/Log.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/backtrace_off.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/sourcesdk/public/ihandleentity.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/sourcesdk/public/tier0/protected_things.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/sourcesdk/public/tier1/utlqueue.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/sourcesdk/public/tier0/platform.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/baseHeaders.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/BaseAnimatingLayer.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/sourcesdk/game/shared/animation.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/F1/F1_ex.cpp",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/ignorewarnings_off.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/ignorewarnings_on.h",
+		"/C/Users/joshua/Documents/GitHub/F12016/DRM_Settings.cpp",
+		"/C/Users/joshua/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/joshua/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/joshua/Documents/GitHub/F12016/SDK/XorString.h",
+		"/C/Users/joshua/AppData/Roaming/Sublime Text 3/Packages/User/clang_format.sublime-settings",
+		"/C/Users/joshua/Documents/GitHub/F12016/F12017.sln",
+		"/C/Users/joshua/AppData/Roaming/Sublime Text 3/Packages/User/build_f1.sublime-build",
+		"/C/Users/joshua/AppData/Roaming/Sublime Text 3/Packages/C++11/C++11.sublime-settings",
+		"/C/Users/joshua/Google Drive/VTable/linux_vtable_dump.idc",
+		"/C/Users/joshua/Documents/GitHub/SourceEngine2007/src_main/game/client/c_baseanimating.cpp",
+		"/C/Users/joshua/Documents/GitHub/SourceEngine2007/src_main/public/studio.cpp",
+		"/C/Users/joshua/Documents/GitHub/pCSGOweb/css/freelancer.min.css",
+		"/C/Users/joshua/Documents/GitHub/pCSGOweb/css/freelancer.css",
+		"/C/Users/joshua/Documents/GitHub/pCSGOweb/index.html",
+		"/C/Users/joshua/Documents/GitHub/pCSGOweb/work.jpg",
+		"/C/Users/joshua/Google Drive/VTable/C_TFWeaponBaseGun.txt",
+		"/C/Program Files (x86)/Steam/SteamApps/common/Team Fortress 2/base.lua",
+		"/C/Users/joshua/Documents/GitHub/SourceEngine2007/src_main/engine/enginetrace.cpp",
+		"/C/tf2-server/tf2/tf/addons/sourcemod/scripting/smac_autotrigger.sp",
+		"/C/tf2-server/tf2/tf/addons/sourcemod/scripting/smac.sp",
+		"/C/tf2-server/tf2/tf/addons/sourcemod/scripting/smac_commands.sp",
+		"/C/tf2-server/tf2/tf/addons/sourcemod/scripting/smac_client.sp"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"C:\\Users\\joshua\\Documents\\GitHub\\F12016\\F1",
+			".\\F1\\*.cpp, .\\F1\\*.h",
+			"F1/*.cpp F1/*.h",
+			"<current file>",
+			"<open files>",
+			"<open folders>",
+			"<current file>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"mail",
+			"appframework",
+			"movieobjects",
+			"movieobjects.lib",
+			"localWeaponHelper",
+			"localWeaponHelper.IsProjectile",
+			"localWeaponHelper.AttackDamage",
+			"dyld_data",
+			"need_exports",
+			"CHECK",
+			"relocations",
+			"fd",
+			"fd_",
+			"::read",
+			"symbol",
+			"addsymb",
+			"addsymb4",
+			"::add",
+			"loadSymbols",
+			"GetProjectileSpeed",
+			"GetWeaponSpeed",
+			"SetUnhandledExceptionFilter",
+			"m_pServerStartupTable",
+			"name",
+			"SetVisible",
+			"CMenuCvarChangePanel",
+			"\"\n",
+			"GetViewPos",
+			"DeepCopy",
+			"s_bAllowExtrapolation",
+			"STUDIO_RENDER",
+			"FrameUpdateRenderStar",
+			"ConVar",
+			"InstallChangeCallback",
+			"intro(",
+			"aimKey",
+			"derived",
+			"UnhandledSehExceptionHandler",
+			"->GetClientClass",
+			"getValue",
+			"Aim (",
+			"Aim ()",
+			"setValue (",
+			"setValue ()",
+			"setValue",
+			"getMax",
+			"Min ()",
+			"getMin ()",
+			"getValue ()",
+			"pDimVar",
+			"SetUnhandledExceptionFilter",
+			"SetFroMString",
+			"Destruct",
+			"RemoveAtHead",
+			"GetBaseEntity (me)",
+			"GetBaseEntity(me)",
+			"me",
+			"pPlayer",
+			"wrap",
+			"caret",
+			"line_",
+			"//=============================================================================",
+			"//===================================================================================================",
+			"sGlowEnt",
+			"MPMOD",
+			"CitiesMulti",
+			"bgvid",
+			"img",
+			".navbar-brand",
+			"navbar",
+			"3BB9FF",
+			"traceray",
+			"DT_BaseCombatCharacter",
+			"\"62\"",
+			"62",
+			"grenade_launcher",
+			"grenade launcher",
+			"valve grenade",
+			"valve grenage",
+			"knife",
+			"unusual_effect",
+			"crone",
+			"//\"equip_region\"",
+			"//\"equip_region",
+			"crone",
+			"max health",
+			"\"equip_region",
+			"attach_to_rootbone",
+			"crone",
+			"rarity4",
+			"attach_to_rootbone",
+			"5083",
+			"decoder Ring",
+			"Decoder_ring",
+			"supply_crate",
+			"unusual_",
+			"recipe",
+			"dynamic_recipe_base",
+			"killstreakifier_kit_basic",
+			"killstreakifier_base",
+			"mayflower",
+			"mayflow",
+			"5083",
+			"mayflower",
+			"keyless",
+			"unusualifier",
+			"killstreak ",
+			"killstreak recipe",
+			"Killstreak",
+			";",
+			"25A",
+			"0x2",
+			"0x7",
+			"0xF",
+			"0x1A",
+			"CM_BoxTrace",
+			"CM_ClearTrace",
+			"TraceRay",
+			"m_iPrevBoneMask",
+			"GetModelWidthScale",
+			"ApplyBoneMatrixTransform",
+			"GetBoneForWrite",
+			"98h",
+			"CStudioHdr",
+			"GetModelPtr()",
+			"GetModelPtr",
+			"BuildTransformations",
+			"Studio_BuildMatrices"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Value",
+			"SetValue (",
+			"SetValue ()",
+			"Max ()",
+			"Min ()",
+			"Value ()",
+			"GetLocalPlayer ()",
+			"",
+			"GlowEnt",
+			"171717",
+			"\"equip_region\"",
+			"//\"equip_region\"",
+			"",
+			"//\"equip_region",
+			" = ",
+			"}",
+			"{",
+			",",
+			"internal",
+			"nil",
+			");"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "F1_Hammer.vcxproj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5647,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MSBuild/MSBuild.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "hammer_launcher/hammer_launcher.vcxproj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13976,
+								13976
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MSBuild/MSBuild.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3574.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "F1_Hammer.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1385,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								286,
+								286
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/joshua/Documents/GitHub/F12016/F1/F1Cheat.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1520,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								586,
+								91
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (Sublime).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "hammer/hammer_dll.vcxproj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 49882,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MSBuild/MSBuild.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 919.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sourcesdk/public/tier0/icommandline.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								280,
+								280
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/joshua/AppData/Local/Temp/0555fb94-7367-4533-9ca7-7764e4ea5eab/var/www/html/api/v1/MyAPI.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21910,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15616,
+								15616
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 9604.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "hammer/hammer.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 61244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "hammer_launcher/main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7099,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1155.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "appframework/appframework.vcxproj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10717,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10514,
+								10514
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MSBuild/MSBuild.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2299.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 350.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "F1_Hammer.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"hammer_launcher",
+				"hammer_launcher\\hammer_launcher.vcxproj"
+			],
+			[
+				"appframework.vcx",
+				"appframework\\appframework.vcxproj"
+			],
+			[
+				"main.cpp",
+				"hammer_launcher\\main.cpp"
+			],
+			[
+				"hammer.cpp",
+				"hammer\\hammer.cpp"
+			],
+			[
+				"icommandline",
+				"sourcesdk\\public\\tier0\\icommandline.h"
+			],
+			[
+				"hammer.vcxpro",
+				"hammer\\hammer_dll.vcxproj"
+			],
+			[
+				"hammer.vcx",
+				"F1_Hammer.vcxproj"
+			],
+			[
+				"f12017-",
+				"F12017-premake.vcxproj"
+			],
+			[
+				"f1cheat",
+				"F1\\F1Cheat.sublime-project"
+			],
+			[
+				"util",
+				"SDK\\Util.h"
+			],
+			[
+				"util.h",
+				"SDK\\Util.h"
+			],
+			[
+				"windows",
+				"SDK\\WindowsProxy.h"
+			],
+			[
+				"targetmanager",
+				"F1\\TargetManager.h"
+			],
+			[
+				"sdk_l",
+				"SDK\\SDK_Linux.cpp"
+			],
+			[
+				"sdk_linux",
+				"SDK\\SDK_Linux.cpp"
+			],
+			[
+				"f12017-premake",
+				"F12017-premake.vcxproj"
+			],
+			[
+				"chack.h",
+				"F1\\CHack.h"
+			],
+			[
+				"chack.",
+				"F1\\CHack.cpp"
+			],
+			[
+				"client.cpp",
+				"F1\\Client.cpp"
+			],
+			[
+				"projectile",
+				"F1\\projectile.cpp"
+			],
+			[
+				"aimbot.cpp",
+				"F1\\Aimbot.cpp"
+			],
+			[
+				"weapon",
+				"F1\\WeaponHelper.h"
+			],
+			[
+				"cesp",
+				"F1\\CEsp.cpp"
+			],
+			[
+				"classid",
+				"SDK\\ClassId.h"
+			],
+			[
+				"projectile.h",
+				"F1\\projectile.h"
+			],
+			[
+				"weaponhelper",
+				"F1\\WeaponHelper.h"
+			],
+			[
+				"projectile.cpp",
+				"F1\\projectile.cpp"
+			],
+			[
+				"aimbot.h",
+				"F1\\Aimbot.h"
+			],
+			[
+				"dllmain",
+				"F1\\DLLMain.cpp"
+			],
+			[
+				"backtrace",
+				"SDK\\backtrace.cpp"
+			],
+			[
+				"cantismac",
+				"F1\\CAntiSmac.cpp"
+			],
+			[
+				"f12017.",
+				"F12017.vcxproj"
+			],
+			[
+				"f1cheat.",
+				"F1\\F1Cheat.sublime-project"
+			],
+			[
+				"cesp.h",
+				"F1\\CEsp.h"
+			],
+			[
+				"knifemain",
+				"Knife\\KnifeMain.cpp"
+			],
+			[
+				"gameinfo",
+				"Launcher\\redist\\GameInfo.txt"
+			],
+			[
+				"f1launcer",
+				"Launcher\\redist\\f1launcher_scheme.res"
+			],
+			[
+				"optionslist",
+				"Launcher\\redist\\OptionsList.txt"
+			],
+			[
+				"main",
+				"Launcher\\main.cpp"
+			],
+			[
+				"mainc.pp",
+				"DLLProcessor\\main.cpp"
+			],
+			[
+				"f1launcher",
+				"Launcher\\redist\\F1Launcher.res"
+			],
+			[
+				"chack.cpp",
+				"F1\\CHack.cpp"
+			],
+			[
+				"pureby",
+				"F1\\CPureBypass.h"
+			],
+			[
+				"panels.",
+				"F1\\Panels.cpp"
+			],
+			[
+				"ihack",
+				"SDK\\IHack.h"
+			],
+			[
+				"f1_cac",
+				"F1\\F1_Cache.cpp"
+			],
+			[
+				"f1_glow.h",
+				"F1\\F1_Glow.h"
+			],
+			[
+				"f1_glow.cp",
+				"F1\\F1_Glow.cpp"
+			],
+			[
+				"f1_glow.cpp",
+				"F1\\F1_Glow.cpp"
+			],
+			[
+				"f1_cache",
+				"F1\\F1_Cache.cpp"
+			],
+			[
+				"f1_vgui",
+				"F1\\F1_VGUIMenu.cpp"
+			],
+			[
+				"lagcomepnsation",
+				"F1\\LagCompensation.h"
+			],
+			[
+				"cautoair",
+				"F1\\CAutoAirblast.h"
+			],
+			[
+				"comoncon",
+				"F1\\CommonControls.h"
+			],
+			[
+				"sdk.h",
+				"SDK\\SDK.h"
+			],
+			[
+				"demo",
+				"SDK\\demo.h"
+			],
+			[
+				"f1_glow",
+				"F1\\F1_Glow.cpp"
+			],
+			[
+				"sdk_win",
+				"SDK\\SDK_Win32.cpp"
+			],
+			[
+				"lagcompensa",
+				"F1\\LagCompensation.h"
+			],
+			[
+				"f1_conv",
+				"F1\\F1_ConVar.h"
+			],
+			[
+				"lagcom",
+				"F1\\LagCompensation.cpp"
+			],
+			[
+				"targetmanager.",
+				"F1\\TargetManager.h"
+			],
+			[
+				"cauto",
+				"F1\\CAutoAirblast.cpp"
+			],
+			[
+				"f1_convar",
+				"F1\\F1_ConVar.cpp"
+			],
+			[
+				"setupbones",
+				"F1\\SetupBones.cpp"
+			],
+			[
+				"dynam",
+				"SDK\\DynamicNetvars.h"
+			],
+			[
+				"sdk",
+				"SDK\\SDK_Shared.cpp"
+			],
+			[
+				"aimbot",
+				"F1\\Aimbot.h"
+			],
+			[
+				"aibmot",
+				"F1\\Aimbot.cpp"
+			],
+			[
+				"cautoaib",
+				"F1\\CAutoAirblast.cpp"
+			],
+			[
+				"panels",
+				"F1\\Panels.cpp"
+			],
+			[
+				"autoair",
+				"F1\\CAutoAirblast.h"
+			],
+			[
+				"autoairblast",
+				"F1\\CAutoAirblast.cpp"
+			],
+			[
+				"cglow",
+				"F1\\CGlow.cpp"
+			],
+			[
+				"f12017-pre",
+				"F12017-premake.vcxproj"
+			],
+			[
+				"drawmanager",
+				"SDK\\CDrawManager.cpp"
+			],
+			[
+				"sourcesdk",
+				"SDK\\SourceSDK.h"
+			],
+			[
+				"cantism",
+				"F1\\CAntiSmac.h"
+			],
+			[
+				"log.cpp",
+				"SDK\\Log.cpp"
+			],
+			[
+				"dllm",
+				"F1\\DLLMain.cpp"
+			],
+			[
+				"projectile.",
+				"F1\\projectile.cpp"
+			],
+			[
+				"commo",
+				"F1\\CommonControls.h"
+			],
+			[
+				"trace.h",
+				"SDK\\Trace.h"
+			],
+			[
+				"cesp.c",
+				"F1\\CEsp.cpp"
+			],
+			[
+				"knfiemain",
+				"Knife\\KnifeMain.cpp"
+			],
+			[
+				"lagcompe",
+				"F1\\LagCompensation.cpp"
+			],
+			[
+				"baseheaders",
+				"SDK\\baseHeaders.h"
+			],
+			[
+				"knife",
+				"Knife\\KnifeMain.cpp"
+			],
+			[
+				"chack.cp",
+				"F1\\CHack.cpp"
+			],
+			[
+				"animation.h",
+				"SDK\\sourcesdk\\game\\shared\\animation.h"
+			],
+			[
+				"baseanimatinglayer",
+				"SDK\\BaseAnimatingLayer.h"
+			],
+			[
+				"lagcompensation",
+				"F1\\LagCompensation.cpp"
+			],
+			[
+				"f1_ex",
+				"F1\\F1_ex.cpp"
+			],
+			[
+				"ignore",
+				"SDK\\ignorewarnings_off.h"
+			],
+			[
+				"f12017-p",
+				"F12017-premake.vcxproj"
+			],
+			[
+				"sourcesdk.",
+				"SDK\\SourceSDK.h"
+			],
+			[
+				".project",
+				"F1\\F1Cheat.sublime-project"
+			],
+			[
+				"drm_sett",
+				"DRM_Settings.cpp"
+			],
+			[
+				"lagcompen",
+				"F1\\LagCompensation.cpp"
+			],
+			[
+				"aimb",
+				"F1\\Aimbot.cpp"
+			],
+			[
+				"base",
+				"SDK\\baseHeaders.h"
+			],
+			[
+				"xors",
+				"SDK\\XorString.h"
+			],
+			[
+				"",
+				"F1\\F1_ConVar.h"
+			],
+			[
+				"commoncont",
+				"F1\\CommonControls.h"
+			],
+			[
+				"sourcesd",
+				"SDK\\SourceSDK.h"
+			],
+			[
+				"f1_vguim",
+				"F1\\F1_VGUIMenu.cpp"
+			],
+			[
+				"drm_se",
+				"DRM_Settings.cpp"
+			],
+			[
+				"baseh",
+				"SDK\\baseHeaders.h"
+			],
+			[
+				"f1201",
+				"F12017.sln"
+			],
+			[
+				"sublimet",
+				"F1\\F1Cheat.sublime-project"
+			],
+			[
+				"f1_gl",
+				"F1\\F1_Glow.h"
+			],
+			[
+				"f1_glow.c",
+				"F1\\F1_Glow.cpp"
+			],
+			[
+				"studio",
+				"public\\studio.cpp"
+			],
+			[
+				"c_baseanimating",
+				"client\\c_baseanimating.cpp"
+			],
+			[
+				"trace",
+				"engine\\enginetrace.cpp"
+			],
+			[
+				"ctfweaponb",
+				"VTable\\C_TFWeaponBaseGun.txt"
+			],
+			[
+				"cmatsystem",
+				"VTable\\cmatsystemsurface.vtable"
+			],
+			[
+				"clientmode",
+				"VTable\\clientmodeshared.vtable"
+			],
+			[
+				"enginetrace.cpp",
+				"engine\\enginetrace.cpp"
+			],
+			[
+				"cmodel",
+				"public\\cmodel.h"
+			],
+			[
+				"cmodel_",
+				"engine\\cmodel_private.h"
+			],
+			[
+				"cmodel_engine",
+				"engine\\cmodel_engine.h"
+			],
+			[
+				"enginetrace",
+				"engine\\enginetrace.cpp"
+			],
+			[
+				"studio.h",
+				"public\\studio.h"
+			],
+			[
+				"cmodelinfo",
+				"public\\engine\\ivmodelinfo.h"
+			],
+			[
+				"irenderable",
+				"public\\iclientrenderable.h"
+			],
+			[
+				"c_baseani",
+				"client\\c_baseanimating.h"
+			],
+			[
+				"c_base",
+				"client\\c_baseanimating.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 266.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

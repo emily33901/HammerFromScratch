@@ -979,8 +979,9 @@ bool Selection3D::OnMouseMove2D(CMapView2D *pView, UINT nFlags, const Vector2D &
 	//
 	// Update status bar position display.
 	//
+	// TODO: only use %g if the gridsize is less than 1!
 	char szBuf[128];
-	sprintf(szBuf, " @%.0f, %.0f ", vecWorld[pView->axHorz], vecWorld[pView->axVert]);
+	sprintf(szBuf, " @%.6g, %.6g ", vecWorld[pView->axHorz], vecWorld[pView->axVert]);
 	SetStatusText(SBI_COORDS, szBuf);
 
 	//

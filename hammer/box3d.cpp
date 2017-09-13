@@ -387,8 +387,8 @@ void Box3D::GetStatusString(char *pszBuf)
 			{
 				case Units_None:
 				{
-					sprintf(pszBuf, " %dw %dl %dh @(%.0f %.0f %.0f)", 
-						(int)fabs(size.x), (int)fabs(size.y), (int)fabs(size.z),
+					sprintf(pszBuf, " %.2fw %.2fl %.2fh @(%.2f %.2f %.2f)", 
+						fabs(size.x), fabs(size.y), fabs(size.z),
 						center.x,center.y,center.z );
 					break;
 				}

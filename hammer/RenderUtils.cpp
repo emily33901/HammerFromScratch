@@ -56,7 +56,11 @@ void DrawBoundsText(CRender2D *pRender, const Vector &Mins, const Vector &Maxs, 
 	pRender->SetTextColor( 255, 255, 255 );
 
     // horz
-     sprintf( extentText, "%.1f", Extents[pView->axHorz] );
+	if(fmod(Extents[pView->axHorz], 1.0f) == 0.0f)
+		sprintf( extentText, "%.0f", Extents[pView->axHorz] );
+	else
+		sprintf(extentText, "%.4f", Extents[pView->axHorz]);
+
  	nTextFlags = CRender2D::TEXT_JUSTIFY_HORZ_CENTER;
     nTextX = projCenter.x;
 
@@ -74,7 +78,11 @@ void DrawBoundsText(CRender2D *pRender, const Vector &Mins, const Vector &Maxs, 
     pRender->DrawText( extentText, nTextX, nTextY, nTextFlags );
 
     // vert
-    sprintf( extentText, "%.1f", Extents[pView->axVert] );
+	if (fmod(Extents[pView->axVert], 1.0f) == 0.0f)
+		sprintf( extentText, "%.0f", Extents[pView->axVert] );
+	else
+		sprintf(extentText, "%.4f", Extents[pView->axVert]);
+
 	nTextFlags = CRender2D::TEXT_JUSTIFY_VERT_CENTER;
 	nTextY = projCenter.y;
 	

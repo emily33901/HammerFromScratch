@@ -67,9 +67,9 @@
 #include "ToolMorph.h"
 #include "ToolBlock.h"
 
+#include ".\mapdoc.h"
 // memdbgon must be the last include file in a .cpp file!!!
 #include <tier0/memdbgon.h>
-#include ".\mapdoc.h"
 
 #define KeyInt( key, dest ) \
 	if (stricmp(szKey, key) != 0) \
@@ -377,6 +377,7 @@ CMapDoc::CMapDoc(void)
 	m_bShowGrid = true;
 	m_bShowLogicalGrid = false;
 	m_nGridSpacing = Options.view2d.iDefaultGrid;
+	m_bSubDivide = false;
 	m_bShow3DGrid = false;
 
 	m_nDocVersion = 0;
@@ -3355,7 +3356,10 @@ void CMapDoc::OnMapSnaptogrid(void)
 void CMapDoc::UpdateStatusBarSnap(void)
 {
 	CString strSnap;
-	strSnap.Format(" Snap: %s Grid: %d ", m_bSnapToGrid ? "On" : "Off", m_nGridSpacing);
+	if (m_bSubDivide == false)
+		strSnap.Format(" Snap: %s Grid: %d ", m_bSnapToGrid ? "On" : "Off", m_nGridSpacing);
+	else
+		strSnap.Format(" Snap: %s Grid: 1/%d", m_bSnapToGrid ? "On" : "Off", m_nGridSpacing);
 	SetStatusText(SBI_SNAP, strSnap);
 }
 
@@ -4619,12 +4623,26 @@ void CMapDoc::OnUpdateFileSave(CCmdUI *pCmdUI)
 //-----------------------------------------------------------------------------
 void CMapDoc::OnMapGridlower(void)
 {
-	if (m_nGridSpacing <= 1)
+	if (m_nGridSpacing == 1 && m_bSubDivide == false)
 	{
+		// TODO: warning about making grid smaller
+		m_bSubDivide = true;
+	}
+	else if (m_nGridSpacing > 32 && m_bSubDivide == true)
+	{
+		// TODO: check if this limit is necessary
 		return;
 	}
 
-	m_nGridSpacing = m_nGridSpacing / 2;
+	if (m_bSubDivide)
+	{
+		m_nGridSpacing = m_nGridSpacing * 2;
+	}
+	else
+	{
+		m_nGridSpacing = m_nGridSpacing / 2;
+	}
+
 	UpdateAllViews( MAPVIEW_OPTIONS_CHANGED );
 	UpdateStatusBarSnap();
 }
@@ -4638,7 +4656,22 @@ void CMapDoc::OnMapGridhigher(void)
 	if(m_nGridSpacing >= 512)
 		return;
 
-	m_nGridSpacing = m_nGridSpacing * 2;
+	if (m_nGridSpacing == 2 && m_bSubDivide == true)
+	{
+		m_bSubDivide = false;
+		
+		// HACK: figure out a better method to do this
+		m_nGridSpacing = 1;
+	}
+	else if (m_bSubDivide)
+	{
+		m_nGridSpacing = m_nGridSpacing / 2;
+	}
+	else
+	{
+		m_nGridSpacing = m_nGridSpacing * 2;
+	}
+
 	UpdateAllViews( MAPVIEW_OPTIONS_CHANGED );
 	UpdateStatusBarSnap();
 }
@@ -6981,7 +7014,7 @@ void CMapDoc::OnInsertprefabOriginal(void)
 	}
 
 	// create object
-	box.SnapToGrid(m_nGridSpacing);	// snap to grid first
+	box.SnapToGrid(GetGridSpacing());	// snap to grid first
 	CMapClass *pObject = GetMainWnd()->m_ObjectBar.CreateInBox(&box);
 	if (pObject == NULL)
 	{
@@ -7420,7 +7453,7 @@ void CMapDoc::OnToolsSnapselectedtogrid(void)
 		// Something other than a single point entity is selected.
 		// Just snap the bmins of the selection bounding box.
 		Vector vOldMins = NewObjectBox.bmins;
-		NewObjectBox.SnapToGrid(m_nGridSpacing);
+		NewObjectBox.SnapToGrid(GetGridSpacing());
 
 		// Calculate the amount to move.
 		vecMove = NewObjectBox.bmins - vOldMins;
@@ -7614,7 +7647,7 @@ void CMapDoc::Snap(Vector &pt, int nFlags)
 	}
 	else if (nFlags & constrainSnap )
 	{
-		float flGridSpacing = m_nGridSpacing;
+		float flGridSpacing = GetGridSpacing();
 
 		if ( nFlags & constrainHalfSnap )
 			flGridSpacing *= 0.5f;

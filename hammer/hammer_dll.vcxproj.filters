@@ -852,6 +852,9 @@
     <ClInclude Include="..\sourcesdk\game\shared\iscenetokenprocessor.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\hammer_tool\IBaseTool.h">
+      <Filter>Source Files\Tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnchorMgr.cpp">
@@ -1797,5 +1800,6 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="whatsnew.txt" />
+    <None Include="..\CHANGELOG" />
   </ItemGroup>
 </Project>

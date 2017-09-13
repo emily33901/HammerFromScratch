@@ -17,9 +17,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\sourcesdk\lib\public\appframework.lib">
-      <Filter>Link Libraries</Filter>
-    </Library>
     <Library Include="..\sourcesdk\lib\public\tier1.lib">
       <Filter>Link Libraries</Filter>
     </Library>
@@ -27,6 +24,9 @@
       <Filter>Link Libraries</Filter>
     </Library>
     <Library Include="..\sourcesdk\lib\public\tier0.lib">
+      <Filter>Link Libraries</Filter>
+    </Library>
+    <Library Include="..\sourcesdk_aux\lib\public\appframework.lib">
       <Filter>Link Libraries</Filter>
     </Library>
   </ItemGroup>

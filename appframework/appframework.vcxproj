@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C2199634-6C18-4D43-9F85-CAA40AC80729}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreLinkEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</PostBuildEventUseInBuild>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreLinkEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>if EXIST ..\lib\public\$(TargetName).lib for /f "delims=" %%A in (%27attrib "..\lib\public\$(TargetName).lib"%27) do set valveTmpIsReadOnly="%%A"
+set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+if "%valveTmpIsReadOnlyLetter%"=="R" (
+attrib -r ..\lib\public\$(TargetName).lib
+..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\$(TargetName).lib
+attrib +r ..\lib\public\$(TargetName).lib
+)
+set path=..\..\game\bin%3b%path%
+if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc appframework.vpc a3d87053 -crc ..\vpc_scripts\source_lib_win32_base.vpc 254f6656 -crc ..\vpc_scripts\version.vpc 26d8e8a7 -crc ..\vpc_scripts\source_lib_win32_debug.vpc cf5cf9db -crc ..\vpc_scripts\source_lib_win32_release.vpc 7991f7e4
+</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;DEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_DLL_EXT=.dll;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <BrowseInformation>
+      </BrowseInformation>
+      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ErrorReporting>Prompt</ErrorReporting>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>call ..\vpc_scripts\valve_p4_edit.cmd ..\lib\public\$(TargetName).lib ..</Command>
+    </PreLinkEvent>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>..\sourcesdk_aux\lib\public\appframework.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Xdcmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Xdcmake>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)appframework.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>if EXIST ..\lib\public\$(TargetName).lib for /f "delims=" %%A in (%27attrib "..\lib\public\$(TargetName).lib"%27) do set valveTmpIsReadOnly="%%A"
+set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+if "%valveTmpIsReadOnlyLetter%"=="R" (
+attrib -r ..\lib\public\$(TargetName).lib
+..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\$(TargetName).lib
+attrib +r ..\lib\public\$(TargetName).lib
+)
+set path=..\..\game\bin%3b%path%
+if exist ..\devtools\bin\vpc.exe ..\devtools\bin\vpc.exe -crc appframework.vpc a3d87053 -crc ..\vpc_scripts\source_lib_win32_base.vpc 254f6656 -crc ..\vpc_scripts\version.vpc 26d8e8a7 -crc ..\vpc_scripts\source_lib_win32_debug.vpc cf5cf9db -crc ..\vpc_scripts\source_lib_win32_release.vpc 7991f7e4
+</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\sourcesdk\common;..\sourcesdk\public;..\sourcesdk\public\tier0;..\sourcesdk\public\tier1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ExpandAttributedSource>false</ExpandAttributedSource>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+      <BrowseInformation>
+      </BrowseInformation>
+      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ErrorReporting>Prompt</ErrorReporting>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>call ..\vpc_scripts\valve_p4_edit.cmd ..\lib\public\$(TargetName).lib ..</Command>
+    </PreLinkEvent>
+    <Lib>
+      <UseUnicodeResponseFiles>false</UseUnicodeResponseFiles>
+      <OutputFile>..\sourcesdk_aux\lib\public\appframework.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Xdcmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Xdcmake>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)appframework.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AppSystemGroup.cpp" />
+    <ClCompile Include="..\sourcesdk\public\filesystem_init.cpp" />
+    <ClCompile Include="VguiMatSysApp.cpp" />
+    <ClCompile Include="WinApp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="appframework.vpc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\sourcesdk\public\appframework\AppFramework.h" />
+    <ClInclude Include="..\sourcesdk\public\appframework\IAppSystem.h" />
+    <ClInclude Include="..\sourcesdk\public\appframework\IAppSystemGroup.h" />
+    <ClInclude Include="..\sourcesdk\public\appframework\tier2app.h" />
+    <ClInclude Include="..\sourcesdk\public\appframework\tier3app.h" />
+    <ClInclude Include="..\sourcesdk\public\appframework\VguiMatSysApp.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

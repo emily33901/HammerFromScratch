@@ -38,6 +38,7 @@
 
 
 #define SnapToGrid(line,grid) (line - (line % grid))
+#define FlSnapToGrid(line, grid) (line - fmod(line, grid))
 
 #define ZOOM_MIN_DEFAULT	0.02125
 #define ZOOM_MAX			256.0
@@ -332,7 +333,7 @@ void CMapView2DBase::SetColorMode(bool bWhiteOnBlack)
 
 // quick & dirty:
 static bool s_bGridDots;
-static int s_iCustomGridSpacing;
+static float s_flCustomGridSpacing;
 
 
 bool CMapView2DBase::HighlightGridLine( CRender2D *pRender, int nGridLine )
@@ -365,7 +366,9 @@ bool CMapView2DBase::HighlightGridLine( CRender2D *pRender, int nGridLine )
 	// Optionally highlight every nth grid line.
 	//
 
-	if (Options.view2d.bGridHigh10 && (!(nGridLine % s_iCustomGridSpacing)))
+	int nSpacing = (int)s_flCustomGridSpacing;
+
+	if (nSpacing != 0 && fmod(s_flCustomGridSpacing, 1.0f) == 0.0f && Options.view2d.bGridHigh10 && !(nGridLine % nSpacing))
 	{
 		if (!s_bGridDots)
 		{
@@ -391,27 +394,36 @@ void CMapView2DBase::DrawGrid(CRender2D *pRender, int xAxis, int yAxis, float de
 		return;
 	
 	// Check for too small grid.
-	int nGridSpacing = pDoc->GetGridSpacing();
+	float flGridSpacing = pDoc->GetGridSpacing();
 
 	// never allow a grid spacing samller then 2 pixel
-	while ( ((float)nGridSpacing * m_fZoom) < 2.0f )
+	while ( ((float)flGridSpacing * m_fZoom) < 2.0f )
 	{
-		nGridSpacing*=2;
+		flGridSpacing *=2;
 	}
 
-	if ((((float)nGridSpacing * m_fZoom) < 4.0f) && Options.view2d.bHideSmallGrid)
+	if ((((float)flGridSpacing * m_fZoom) < 4.0f) && Options.view2d.bHideSmallGrid)
 	{
 		bNoSmallGrid = true;
 	}
 
 	// No dots if too close together.
 	s_bGridDots = Options.view2d.bGridDots;
-	s_iCustomGridSpacing = nGridSpacing * Options.view2d.iGridHighSpec;
+	s_flCustomGridSpacing = flGridSpacing * Options.view2d.iGridHighSpec;
 
-	int xMin = SnapToGrid( (int)max( g_MIN_MAP_COORD, m_ViewMin[xAxis]-nGridSpacing ), nGridSpacing );
-	int xMax = SnapToGrid( (int)min( g_MAX_MAP_COORD, m_ViewMax[xAxis]+nGridSpacing ), nGridSpacing );
-	int yMin = SnapToGrid( (int)max( g_MIN_MAP_COORD, m_ViewMin[yAxis]-nGridSpacing ), nGridSpacing );
-	int yMax = SnapToGrid( (int)min( g_MAX_MAP_COORD, m_ViewMax[yAxis]+nGridSpacing ), nGridSpacing );
+	float min_coord = g_MIN_MAP_COORD;
+	float max_coord = g_MAX_MAP_COORD;
+
+	if (flGridSpacing < 1.0f)
+	{
+		min_coord /= flGridSpacing;
+		max_coord /= flGridSpacing;
+	}
+
+	float xMin = FlSnapToGrid( max(min_coord, m_ViewMin[xAxis]- flGridSpacing), flGridSpacing);
+	float xMax = FlSnapToGrid( min(max_coord, m_ViewMax[xAxis]+ flGridSpacing), flGridSpacing);
+	float yMin = FlSnapToGrid( max(min_coord, m_ViewMin[yAxis]- flGridSpacing), flGridSpacing);
+	float yMax = FlSnapToGrid( min(max_coord, m_ViewMax[yAxis]+ flGridSpacing), flGridSpacing);
 	
 	
 	Assert( xMin < xMax );
@@ -434,7 +446,7 @@ void CMapView2DBase::DrawGrid(CRender2D *pRender, int xAxis, int yAxis, float de
 		CMatRenderContextPtr pRenderContext( MaterialSystemInterface() );
 		IMesh* pMesh = pRenderContext->GetDynamicMesh();
 
-		for (int y = yMin; y <= yMax; y += nGridSpacing )
+		for (float y = yMin; y <= yMax; y += flGridSpacing )
 		{
 			Vector vPoint(depth,depth,depth);
 			vPoint[yAxis] = y;
@@ -445,15 +457,15 @@ void CMapView2DBase::DrawGrid(CRender2D *pRender, int xAxis, int yAxis, float de
 			// dot drawing isn't precise enough in world space
 			// so we still do it in client space
 
-			int nNumPoints = 1+abs(xMax-xMin)/nGridSpacing;
+			int nNumPoints = 1+abs(xMax-xMin)/ flGridSpacing;
 
 			meshBuilder.Begin( pMesh, MATERIAL_LINES, nNumPoints );
 
-			float fOffset = nGridSpacing * m_fZoom;
+			float fOffset = flGridSpacing * m_fZoom;
 
 			while( nNumPoints > 0)
 			{
-                float roundfx = (int)(v2D.x+0.5);
+                float roundfx = v2D.x;
 				v2D.x += fOffset;
 
 				meshBuilder.Position3f( roundfx, v2D.y, 0 );
@@ -474,11 +486,16 @@ void CMapView2DBase::DrawGrid(CRender2D *pRender, int xAxis, int yAxis, float de
 		pRender->EndClientSpace();
 	}
 
-	for (int y = yMin; y <= yMax; y += nGridSpacing )
+	for (float y = yMin; y <= yMax; y += flGridSpacing)
 	{
 		pRender->SetDrawColor( m_clrGrid );
 
-		int bHighligh = HighlightGridLine( pRender, y );
+		int bHighligh;
+		
+		if (fmod(y, 1.0f) == 0.0f)
+			bHighligh = HighlightGridLine(pRender, y);
+		else
+			bHighligh = 0;
 		
 		// Don't draw the base grid if it is too small.
 		
@@ -497,11 +514,16 @@ void CMapView2DBase::DrawGrid(CRender2D *pRender, int xAxis, int yAxis, float de
 	vPointMin[yAxis] = yMin;
 	vPointMax[yAxis] = yMax;
 
-	for (int x = xMin; x <= xMax; x += nGridSpacing )
+	for (float x = xMin; x <= xMax; x += flGridSpacing)
 	{
 		pRender->SetDrawColor( m_clrGrid );
 
-		int bHighligh = HighlightGridLine( pRender, x );
+		int bHighligh;
+
+		if (fmod(x, 1.0f) == 0.0f)
+			bHighligh = HighlightGridLine(pRender, x);
+		else
+			bHighligh = 0;
 
 		// Don't draw the base grid if it is too small.
 		if ( !bHighligh && bNoSmallGrid )
@@ -528,7 +550,7 @@ void CMapView2DBase::DrawGridLogical( CRender2D *pRender )
 	// Grid in logical view is always 1024
 	int nGridSpacing = 1024;
 
-	s_iCustomGridSpacing = nGridSpacing;
+	s_flCustomGridSpacing = nGridSpacing;
 	s_bGridDots = false;
 
 	int xAxis = 0;

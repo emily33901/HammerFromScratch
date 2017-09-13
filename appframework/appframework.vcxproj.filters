@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2a4ac3cf-f935-4147-ad6e-08bd776b6ded}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{8243f66c-b089-4c0c-9504-57f04049ecfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{d5113f0a-ede0-49b0-904a-ca811b8808dd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppSystemGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VguiMatSysApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WinApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\public\filesystem_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="appframework.vpc">
+      <Filter>Resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\sourcesdk\public\appframework\AppFramework.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\appframework\IAppSystem.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\appframework\IAppSystemGroup.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\appframework\tier2app.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\appframework\tier3app.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sourcesdk\public\appframework\VguiMatSysApp.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
