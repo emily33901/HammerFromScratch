@@ -17,6 +17,8 @@
 #include "icommandline.h"
 
 
+#include <Windows.h>
+
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
 
@@ -621,3 +623,4 @@ bool CSteamAppSystemGroup::SetupSearchPaths( const char *pStartingDir, bool bOnl
 	Q_strncpy( m_pGameInfoPath, steamInfo.m_GameInfoPath, sizeof(m_pGameInfoPath) );
 	return true;
 }
+

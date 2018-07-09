@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectName>Datamodel</ProjectName>
     <ProjectGuid>{935148AD-A283-4210-A6B2-DCC6A97E783A}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
